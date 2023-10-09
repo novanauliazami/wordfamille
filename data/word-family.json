@@ -1,0 +1,893 @@
+[
+  {
+    "word": "s'appeler",
+    "family": [
+      {
+        "word": "appeler (v.intr)",
+        "meaning": "memanggil"
+      },
+      {
+        "word": "appel (n.m)",
+        "meaning": "panggilan/nama"
+      },
+      {
+        "word": "appellation (n.f)",
+        "meaning": "penyebutan/pengucapan"
+      }
+    ]
+  },
+  {
+    "word": "La France",
+    "family": [
+      {
+        "word": "français (n.m)",
+        "meaning": "Orang Perancis (lk)"
+      },
+      {
+        "word": "française (n.f)",
+        "meaning": "Orang Perancis (pr)"
+      },
+      {
+        "word": "franco",
+        "meaning": "hal-hal yang berkaitan dengan prancis atau orang perancis"
+      },
+      {
+        "word": "francophonie (n.f)",
+        "meaning": "negara berbahasa perancis"
+      },
+      {
+        "word": "franchir (v.intr)",
+        "franchir (v.intr)": "melewati atau menyeberangi"
+      }
+    ]
+  },
+  {
+    "word": "La Belge",
+    "family": [
+      {
+        "word": "belge (n.f)",
+        "meaning": "orang-orang belgia"
+      },
+      {
+        "word": "belgique (n.f)",
+        "meaning": "negara belgia"
+      },
+      {
+        "word": "belge (n.f)",
+        "meaning": "hal-hal yang berkaitan dengan negara belgia"
+      }
+    ]
+  },
+  {
+    "word": "le bresil",
+    "family": [
+      {
+        "word": "Brésil (n.m)",
+        "meaning": "Negara Brasil"
+      },
+      {
+        "word": "Bresilienne (n.f)",
+        "meaning": "Orang Brasil (Pr)"
+      },
+      {
+        "word": "Bresilien (n.m)",
+        "meaning": "Orang Brasil (Lk)"
+      },
+      {
+        "word": "Bresilien (adj)",
+        "meaning": "berkaitan dengan Brasil"
+      }
+    ]
+  },
+  {
+    "word": "L'Allemagne",
+    "family": [
+      {
+        "word": "Allemand (n.m)",
+        "meaning": "Negara Jerman"
+      },
+      {
+        "word": "Allemand (n.m)",
+        "meaning": "Orang Jerman (lk) atau Bahasa Jerman"
+      },
+      {
+        "word": "Allemande (n.f)",
+        "meaning": "Orang Jerman (Pr)"
+      },
+      {
+        "word": "Allemand (adj)",
+        "meaning": "berkaitan dengan Jerman"
+      }
+    ]
+  },
+  {
+    "word": "L'Espagne",
+    "family": [
+      {
+        "word": "Espagne (n.m)",
+        "meaning": "Negara Spanyol"
+      },
+      {
+        "word": "Espagnol (n.m)",
+        "meaning": "Orang Spanyol (Lk)"
+      },
+      {
+        "word": "Espagnole (n.f)",
+        "meaning": "Orang Spanyol (Pr)"
+      },
+      {
+        "word": "Espagnol (adj)",
+        "meaning": "Berkaitan dengan Negara Spanyol"
+      }
+    ]
+  },
+  {
+    "word": "L'Angleterre",
+    "family": [
+      {
+        "word": "Angleterre (n.m)",
+        "meaning": "Negara Inggris"
+      },
+      {
+        "word": "Anglais (n.m)",
+        "meaning": "Orang Inggris (lk)"
+      },
+      {
+        "word": "Anglaise (n.f)",
+        "meaning": "Orang Inggris (pr)"
+      },
+      {
+        "word": "Anglaise (adj)",
+        "meaning": "Berkaitan dengan Negara Inggris"
+      },
+      {
+        "word": "Londres (n.m)",
+        "meaning": "London"
+      }
+    ]
+  },
+  {
+    "word": "Le Japon",
+    "family": [
+      {
+        "word": "Japon (n.m)",
+        "meaning": "Negara Jepang"
+      },
+      {
+        "word": "Japonais (n.m)",
+        "meaning": "Orang Jepang (lk)"
+      },
+      {
+        "word": "Japonaise (n.f)",
+        "meaning": "Orang Jepang (pr)"
+      },
+      {
+        "word": "Japonais (n.m)",
+        "meaning":"Berkaitan dengan Negara Jepang"
+      }
+    ]
+  },
+  {
+    "word": "Le Chine",
+    "family": [
+      {
+        "word": "Chine (n.m)",
+        "meaning": "Orang China (Lk)"
+      },
+      {
+        "word": "Chinois (n.m)",
+        "meaning": "Orang China (lk)"
+      },
+      {
+        "word": "Chinoise (n.m)",
+        "meaning": "Orang China (pr)"
+      },
+      {
+        "word": "Chinois (adj)",
+        "meaning": "berkaitan dengan Negara China"
+      }
+    ]
+  },
+  {
+    "word": "Ingenier (v.pron)",
+    "family": [
+      {
+        "word": "Ingenier (v.pron)",
+        "meaning": "mencari akal"
+      },
+      {
+        "word": "Ingenieur (n.m)",
+        "meaning": "Insinyur atau ahli teknik"
+      },
+      {
+        "word": "Ingenierie (n.m)",
+        "meaning": "bidang ilmu teknik"
+      },
+      {
+        "word": "Ingenieriste (n.f)",
+        "meaning": "spesialis teknil atau penyelenggara teknis"
+      },
+      {
+        "word": "Ingenieux, euse (adj)",
+        "meaning": "cemerlang atau cerdik"
+      },
+      {
+        "word": "ingeniosite (n.f)",
+        "meaning": "kecerdikan"
+      },
+      {
+        "word": "ingeniosite (n.f)",
+        "meaning": "dengan cerdik, dengan kecerdasan"
+      }
+    ]
+  },
+  {
+    "word": "Un Graphiste (n.m)",
+    "family": [
+      {
+        "word": "Graphiste (n.m)",
+        "meaning": "desainer grafis"
+      },
+      {
+        "word": "Graphisme (n.f)",
+        "meaning": "desain grafis atau seni grafis"
+      },
+      {
+        "word": "Graphique (adj)",
+        "meaning": "berkaitan dengan desain grafis"
+      },
+      {
+        "word": "Infographie (n.m)",
+        "meaning": "infografis"
+      }
+    ]
+  },
+  {
+    "word": "Une Etudiante",
+    "family": [
+      {
+        "word": "etudiant (n.m)",
+        "meaning": "mahasiswa atau pelajar (lk)"
+      },
+      {
+        "word": "etudiante (n.f)",
+        "meaning": "mahasiswa atau pelajar (pr)"
+      },
+      {
+        "word": "etudier (v.intr)",
+        "meaning": "belajar"
+      },
+      {
+        "word": "etude (n.m)",
+        "meaning": "pendidikan"
+      },
+      {
+        "word": "educatif (adv)",
+        "meaning": "hal yang berkaitan dengan pendidikan"
+      },
+      {
+        "word": "s'etudier (v.pron)",
+        "meaning": "mawas diri"
+      },
+      {
+        "word": "etudie, ee (adj)",
+        "meaning": "dipikirkan, hal-hal yang dipikirkan"
+      }
+    ]
+  },
+  {
+    "word": "Haure",
+    "family": [
+      {
+        "word": "Haurex (adj)",
+        "meaning": "bahagia, senang"
+      },
+      {
+        "word": "Heureusement (adv)",
+        "meaning": "dengan beruntung, untungnya"
+      },
+      {
+        "word": "Heure (n.m)",
+        "meaning": "jam, waktu"
+      },
+      {
+        "word": "Heure creuse (n.m)",
+        "meaning": "jam sibuk"
+      }
+    ]
+  },
+  {
+    "word": "Jour",
+    "family": [
+      {
+        "word": "Jour (n.m)",
+        "meaning": "hari"
+      },
+      {
+        "word": "Journal (n.m)",
+        "meaning": "surat kabar, jurnal"
+      },
+      {
+        "word": "Journalist, e (n.m)",
+        "meaning": "wartawan atau jurnalis"
+      },
+      {
+        "word": "Journee (n.m)",
+        "meaning": "hari, sepanjang hari"
+      },
+      {
+        "word": "Journalier (adj)",
+        "meaning": "harian, keseharian"
+      }
+    ]
+  },
+  {
+    "word": "Mois",
+    "family": [
+      {
+        "word": "Mois (n.m)",
+        "meaning": "bulan"
+      },
+      {
+        "word": "Moisson (n.f)",
+        "meaning": "panen, pemanenan"
+      }
+    ]
+  },
+  {
+    "word": "habiter (v.intr)",
+    "family": [
+      {
+        "word": "habiter (v.intr)",
+        "meaning": "tinggal, menempati"
+      },
+      {
+        "word": "habitable (adj)",
+        "meaning": "dapat dihuni, didiami"
+      },
+      {
+        "word": "habitacle (n.m)",
+        "meaning": "biik kompas di kapal, kokpit"
+      },
+      {
+        "word": "habitation (n.f)",
+        "meaning": "pemukiman"
+      },
+      {
+        "word": "habitude (n.f)",
+        "meaning": "kebiasaan"
+      },
+      {
+        "word": "habituel, elle(ajd)",
+        "meaning": "biasa, lazim, lumrah"
+      },
+      {
+        "word": "habituellement (adv)",
+        "meaning": "lazimnya, biasanya"
+      },
+      {
+        "word": "habituer (v.intr)",
+        "meaning": "membiasakan diri"
+      },
+      {
+        "word": "s'habituer a (v.pron)",
+        "meaning": "membiasakan diri"
+      },
+      {
+        "word": "habitue, ee (n.)",
+        "meaning": "langganan"
+      }
+    ]
+  },
+  {
+    "word": "Epeler",
+    "family": [
+      {
+        "word": "Epeler (v.intr)",
+        "meaning": "mengeja"
+      },
+      {
+        "word": "Epelation (n.f)",
+        "meaning": "pengucapan/ ejaan"
+      }
+    ]
+  },
+  {
+    "word": "Regader",
+    "family": [
+      {
+        "word": "regard (n.m)",
+        "meaning": "pandangan mata"
+      },
+      {
+        "word": "regarder (v.intr)",
+        "meaning": "mamandang, melihat"
+      }
+    ]
+  },
+  {
+    "word": "Accueillir",
+    "family": [
+      {
+        "word": "Accueil (n.m)",
+        "meaning": "sambutan, penerimaan"
+      },
+      {
+        "word": "accueillant (adj)",
+        "meaning": "ramah"
+      },
+      {
+        "word": "accueillie (n.m)",
+        "meaning": "tamu"
+      }
+    ]
+  },
+  {
+    "word": "Parler",
+    "family": [
+      {
+        "word": "parole (n.m)",
+        "meaning": "kata-kata, ucapan"
+      },
+      {
+        "word": "parleur (n.m)",
+        "meaning": "pembicara, orang yang berbicara"
+      },
+      {
+        "word": "parler (v.intr)",
+        "meaning": "berbicara, berkomunikasi"
+      },
+      {
+        "word": "parleur (n.m)",
+        "meaning": "ruangan bicara, ruangan percakapan"
+      }
+    ]
+  },
+  {
+    "word": "Aimer",
+    "family": [
+      {
+        "word": "amour (n.m)",
+        "meaning": "cinta"
+      },
+      {
+        "word": "aimable (adj)",
+        "meaning": "ramah, menyenangkan"
+      },
+      {
+        "word": "aimant (n.m)",
+        "meaning": "magnet"
+      },
+      {
+        "word": "aimablement (adv)",
+        "meaning": "dengan senang hati"
+      },
+      {
+        "word": "aimantation (n.f)",
+        "meaning": "maknitasi"
+      },
+      {
+        "word": "aimanter (v.intr)",
+        "meaning": "memaknitkan"
+      }
+    ]
+  },
+  {
+    "word": "Commencer",
+    "family": [
+      {
+        "word": "commencement (n.m)",
+        "meaning":"awal, pembukaan"
+      },
+      {
+        "word": "commencer (v.intr)",
+        "meaning": "memulai"
+      },
+      {
+        "word": "commencant, ante(adj dan n.m)",
+        "meaning": "pemula"
+      }
+    ]
+  },
+  {
+    "word": "Connaitre",
+    "family": [
+      {
+        "word": "Connaissance (n.m)",
+        "meaning": "pengetahuan"
+      },
+      {
+        "word": "connaiseur (n.m)",
+        "meaning": "ahli"
+      },
+      {
+        "word": "reconnaitre (v.intr)",
+        "meaning": "mengenali, mengakui"
+      },
+      {
+        "word": "meconnaitre (v.intr)",
+        "meaning": "tidak mengenali, tidak mengakui"
+      },
+      {
+        "word": "connu, e (adj)",
+        "meaning": "terkenal"
+      },
+      {
+        "word": "inconnu, e (adj)",
+        "meaning": "asing"
+      }
+    ]
+  },
+  {
+    "word": "presener",
+    "family": [
+      {
+        "word": "presenter (v.intr)",
+        "meaning": "memperkenalkan"
+      },
+      {
+        "word": "presentation (n.f)",
+        "meaning": "penyajian, perkenalan"
+      },
+      {
+        "word": "presentable (adj)",
+        "meaning": "patut dipamerkan, disajian"
+      },
+      {
+        "word": "presentateur, trice (n)",
+        "meaning": "pembawa acara"
+      },
+      {
+        "word": "present,ente (adj)",
+        "meaning": "hadir"
+      },
+      {
+        "word": "presence (n.f)",
+        "meaning": "kehadiran"
+      },
+      {
+        "word": "presentoir (n.m)",
+        "meaning": "rak tampilan, rak display"
+      },
+      {
+        "word": "representer (v.intr)",
+        "meaning": "menggambarkan, menunjukan"
+      },
+      {
+        "word": "representant (n.m)",
+        "meaning": "wakil"
+      },
+      {
+        "word": "representatif, ive (adj)",
+        "meaning": "mewakili"
+      },
+      {
+        "word": "representativite (n.f)",
+        "meaning": "yang mewakili kelompok, golongan atau rakyat"
+      },
+      {
+        "word": "representation (n.f)",
+        "meaning": "penyajian, perwujudan"
+      },
+      {
+        "word": "presentement (adv)",
+        "meaning": "saat ini, masa sekarang, masa kini"
+      },
+      {
+        "word": "se présenter (v.pron)",
+        "meaning": "memperkenalkan diri"
+      }
+    ]
+  },
+  {
+    "word": "La Nourriture",
+    "family": [
+      {
+        "word": "nourriture (n)",
+        "meaning": "makanan"
+      },
+      {
+        "word": "nourrir (v.intr)",
+        "meaning": "memberi makan, mengambil makan"
+      },
+      {
+        "word": "nourrissant,ante (adj)",
+        "meaning": "bergizi"
+      },
+      {
+        "word": "nounou (n.f)",
+        "meaning": "pengasuh"
+      },
+      {
+        "word": "naurrice (n.f)",
+        "meaning": "ibu yang menyusui bayi"
+      },
+      {
+        "word": "naurricier,iere (adj)",
+        "meaning": "orang tua angkat"
+      },
+      {
+        "word": "naurricier,iere (adj)",
+        "meaning": "pemberi makanan, bergizi"
+      },
+      {
+        "word": "naurrison (n.m)",
+        "meaning": "anak susuan"
+      }
+    ]
+  },
+  {
+    "word": "La Locataire",
+    "family": [
+      {
+        "word": "locataire (n.f)",
+        "meaning": "penghuni sewa"
+      },
+      {
+        "word": "location (n.f)",
+        "meaning": "penyewaan"
+      },
+      {
+        "word": "louer (v.intr)",
+        "meaning": "menyewa"
+      },
+      {
+        "word": "loueur, euse (n)",
+        "meaning": "penyewa"
+      },
+      {
+        "word": "se louer (v.pron)",
+        "meaning": "disewakan"
+      }
+    ]
+  },
+  {
+    "word": "Un Chiffre",
+    "family": [
+      {
+        "word": "chiffre (n.m)",
+        "meaning": "angka"
+      },
+      {
+        "word": "chiffrer (v.intr)",
+        "meaning": "menghitung"
+      },
+      {
+        "word": "chiffrement (n.m)",
+        "meaning": "enskripsi"
+      },
+      {
+        "word": "chiffrier",
+        "meaning": "tabel angka"
+      },
+      {
+        "word": "chiffrage (n.f)",
+        "meaning": "penghitungan"
+      },
+      {
+        "word": "chiffreur",
+        "meaning": "orang yang menulis angka"
+      }
+    ]
+  },
+  {
+    "word": "Ecouter",
+    "family": [
+      {
+        "word": "ecoute (n.f)",
+        "meaning": "pendengaran"
+      },
+      {
+        "word": "ecounter (v.intr)",
+        "meaning": "mendengarkan"
+      },
+      {
+        "word": "ecouter (n.m)",
+        "meaning": "headphone, alat pendengar"
+      }
+    ]
+  },
+  {
+    "word": "Repeter",
+    "family": [
+      {
+        "word": "Repetition (n.f)",
+        "meaning": "pengulangan"
+      },
+      {
+        "word": "repeter (v.intr)",
+        "meaning": "mengulangi, mengatakan kembali"
+      },
+      {
+        "word": "repetiteur, trice (n)",
+        "meaning": "seseorang yang mengulangi perkataan sebelumnya"
+      },
+      {
+        "word": "repetable (adj)",
+        "meaning": "dapat diulangi, bisa diulangi"
+      }
+    ]
+  },
+  {
+    "word": "Apprendre",
+    "family": [
+      {
+        "word": "apprentissage (n.m)",
+        "meaning": "pembelajaran"
+      },
+      {
+        "word": "apprendre (v.intr)",
+        "meaning": "mempelajari"
+      },
+      {
+        "word": "apprenant, ante (n)",
+        "meaning": "pelajar"
+      },
+      {
+        "word": "reapprendre (v.intr)",
+        "meaning": "mempelajari kembali, belajar lagi"
+      }
+    ]
+  },
+  {
+    "word": "Naitre",
+    "family": [
+      {
+        "word": "naissance (n.f.)",
+        "meaning": "kelahiran"
+      },
+      {
+        "word": "ne,e (n.m)",
+        "meaning": "lahir"
+      },
+      {
+        "word": "natalite (n.m)",
+        "meaning": "kelahiran atau tingkat kelahiran"
+      },
+      {
+        "word": "pronatalite (n.m)",
+        "meaning": "kecenderungan untuk memiliki anak"
+      },
+      {
+        "word": "neonatalogie (n.m)",
+        "meaning": "cabang kedokteran yang berfokus pada perawatan bayi baru lahir"
+      },
+      {
+        "word": "renaitre (v.intr)",
+        "meaning": "bangkit kembali, lahir kembali"
+      },
+      {
+        "word": "naitre (v.intr)",
+        "meaning": "lahir"
+      },
+      {
+        "word": "naissant,ante (adj)",
+        "meaning": "mulai tumbuh"
+      },
+      {
+        "word": "natal,ale,als (adj)",
+        "meaning": "tempat kelahiran"
+      },
+      {
+        "word": "natif,ive (adj)",
+        "meaning": "berasal, dari"
+      }
+    ]
+  },
+  {
+    "word": "L'identité",
+    "family": [
+      {
+        "word": "Identité (n.m)",
+        "meaning": "identitas"
+      },
+      {
+        "word": "identifiant (n.f)",
+        "meaning": "informasi pengenalan"
+      },
+      {
+        "word": "identique (adj)",
+        "meaning": "serupa"
+      },
+      {
+        "word": "indentifier (v.intr)",
+        "meaning": "mengidentifikasi, mengenali"
+      },
+      {
+        "word": "identification (n.f)",
+        "meaning": "pengenalan"
+      },
+      {
+        "word": "identifiable (adj)",
+        "meaning": "dapat dikenali"
+      },
+      {
+        "word": "identiquement (adv)",
+        "meaning": "sama"
+      }
+    ]
+  },
+  {
+    "word": "le sport",
+    "family": [
+      {
+        "word": "sport (n.m)",
+        "meaning": "olahraga"
+      },
+      {
+        "word": "sportif,ive (adj)",
+        "meaning": "berhubungan dengan olahraga"
+      },
+      {
+        "word": "sportivite (n.f)",
+        "meaning": "sportifitas, jiwa olahraga"
+      },
+      {
+        "word": "sportivement",
+        "meaning": "secara sportif"
+      }
+    ]
+  },
+  {
+    "word": "la dense",
+    "family": [
+      {
+        "word": "danse (n.f)",
+        "meaning": "tarian"
+      },
+      {
+        "word": "danser (v.intr)",
+        "meaning": "menari"
+      },
+      {
+        "word": "danseur,euse (n)",
+        "meaning": "penari"
+      }
+    ]
+  },
+  {
+    "word": "le chanson",
+    "family": [
+      {
+        "word": "chanter (v.intr)",
+        "meaning": "bernyanyi"
+      },
+      {
+        "word": "chanteur,euse (n)",
+        "meaning": "penyanyi"
+      },
+      {
+        "word": "chanson (n.m)",
+        "meaning": "lagu"
+      },
+      {
+        "word": "chant (n.m)",
+        "meaning": "nyanyian"
+      },
+      {
+        "word": "chantant,ante (adj)",
+        "meaning": "berirama"
+      },
+      {
+        "word": "chanterelle (n.f)",
+        "meaning": "senar pertama"
+      },
+      {
+        "word": "chantsonnier (n.m)",
+        "meaning": "pengarang lagu"
+      },
+      {
+        "word": "chansonnette (n.f)",
+        "meaning": "lagu hiburan"
+      },
+      {
+        "word": "chantonner (v.intr)",
+        "meaning": "bersenandung"
+      },
+      {
+        "word": "chantonement (n.m)",
+        "meaning": "senandung"
+      }
+    ]
+  }
+]
