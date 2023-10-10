@@ -24,8 +24,8 @@ function SearchBox() {
         </div>
         <input
           type="text" id="search"
-          className="block w-full pl-10 p-2.5 rounded-lg"
-          placeholder="enter verb in french"
+          className="block text-sm w-full pl-10 p-2.5 rounded-lg"
+          placeholder="Masukan kata kerja dalam bahasa Perancis"
           onChange={handleChange}
           value={searchData}
           required />

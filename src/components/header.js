@@ -38,7 +38,7 @@ function SearchBox() {
 
 export default function Header() {
   const navlink = [
-    {label: "Home", target: "/"},
+    {label: "Beranda", target: "/"},
     {label: "Evaluasi", target: "/evaluation"},
     {label: "Bantuan", target: "#help"}
   ]
