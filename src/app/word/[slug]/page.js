@@ -1,6 +1,6 @@
 import getWordFamilies from "@/lib/wordfamilies"
 import Link from "next/link"
-import { notFound } from "next/navigation"
+import { server } from '@/lib/config'
 
 export async function generateStaticParams() {
   const wordFamilies = await getWordFamilies()
@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 async function getWordFamily(query) {
-  const res = await fetch(`http://localhost:3000/word?q=${query}`, { cache: 'no-store' })
+  const res = await fetch(`${server}/word?q=${query}`, { cache: 'no-cache' })
   
   if(!res.ok)
     return undefined
