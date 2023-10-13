@@ -1,7 +1,7 @@
 {
   "functions": {
     "app/word/[slug]/route.js": {
-      "memory": 5000,
+      "memory": 3000,
       "maxDuration": 30
     }
   }
