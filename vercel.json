@@ -1,6 +1,6 @@
 {
   "functions": {
-    "app/word/[slug]/route.js": {
+    "src/app/word/[slug]/route.js": {
       "memory": 3000,
       "maxDuration": 30
     }

@@ -15,7 +15,11 @@ export async function generateStaticParams() {
 }
 
 async function getWordFamily(query) {
-  const res = await fetch(`${server}/word?q=${query}`, { cache: 'no-cache' })
+  const res = await fetch(`${server}/word?q=${query}`, {
+    next: {
+      revalidate: 3600
+    }
+  })
   
   if(!res.ok)
     return undefined
@@ -25,20 +29,20 @@ async function getWordFamily(query) {
 
 function DefinitionList({definitions}) {
 
-  const ShowDefinition = ({word, meaning, index}) =>{
+  const ShowDefinition = ({definition, num}) =>{
     return (
-      <li class="py-3 sm:py-4">
-        <div class="flex items-center space-x-4">
-          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-gray-900 truncate">
-                {word}
+      <li className="py-3 sm:py-4">
+        <div className="flex items-center space-x-4">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-medium text-gray-900 truncate">
+                {definition.word} ({definition.wordClass})
             </p>
-            <p class="text-sm text-gray-500 truncate">
-                {meaning}
+            <p className="text-sm text-gray-500 truncate">
+                {definition.meaning}
             </p>
           </div>
-          <div class="inline-flex items-center text-base font-semibold text-gray-900">
-              { index }
+          <div className="inline-flex items-center text-base font-semibold text-gray-900">
+              { num }
           </div>
         </div>
       </li>
@@ -50,8 +54,8 @@ function DefinitionList({definitions}) {
         {
           definitions.map((definition, index) => {
             return <ShowDefinition
-                      key={index} word={definition.word}
-                      meaning={definition.meaning} index={index+1}
+                      key={index} num={index+1}
+                      definition={definition}
                     />
           })
         }
@@ -62,8 +66,8 @@ function DefinitionList({definitions}) {
 
 function DefinitionNotFound({params}) {
   return (
-    <div className="max-w-4xl mx-auto px-2 my-8">
-      <div className="w-full max-w-md p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+    <div className="mx-auto px-2 my-8">
+      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none">
             { decodeURI(params.slug) }
@@ -73,7 +77,7 @@ function DefinitionNotFound({params}) {
           </Link>
         </div>
         <div className="border-t border-gray-200 py-3 sm:py-4">
-          <p class="text-sm font-medium truncate">
+          <p className="text-sm font-medium truncate">
             Kata Tidak Ditemukan
           </p>
         </div>
