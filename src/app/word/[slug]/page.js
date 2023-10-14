@@ -67,7 +67,7 @@ function DefinitionList({definitions}) {
 function DefinitionNotFound({params}) {
   return (
     <div className="mx-auto px-2 my-8">
-      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+      <div className="w-full max-w-md p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none">
             { decodeURI(params.slug) }
@@ -93,7 +93,7 @@ export default async function ShowWord({params}){
     return <DefinitionNotFound params={params} />
 
   return (
-    <div className="max-w-4xl mx-auto px-2 my-8">
+    <div className="max-w-2xl mx-auto px-2 my-8">
       <div className="w-full max-w-md p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold leading-none">

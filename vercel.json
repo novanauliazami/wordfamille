@@ -1,8 +1,12 @@
 {
   "functions": {
     "src/app/word/[slug]/route.js": {
-      "memory": 3000,
-      "maxDuration": 30
+      "memory": 1000,
+      "maxDuration": 10
+    },
+    "src/app/word/search/route.js": {
+      "memory": 1000,
+      "maxDuration": 10
     }
   }
 }
