@@ -1,15 +1,15 @@
 export const questions = [
   {
-    "question": "Elle a répondu à %s de la nature en se promenant dans la forêt.",
+    "question": "J'attends un %s important de mon ami.",
     "options": [
-      "l'appel",
-      "l’appellation",
-      "s’appelle"
+      "appel",
+      "appelation",
+      "s’appele"
     ],
     "correctAns": 0
   },
   {
-    "question": "Le couple a des origines %s -italiennes.",
+    "question": "Le couple a des origines %s-italiennes.",
     "options": [
       "français",
       "francophonie",
@@ -18,16 +18,16 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": "Elle a résolu le problème de manière %s simple.",
+    "question": " Un %s est responsable de la conception.",
     "options": [
       "ingénierie",
       "ingénieusement",
       "ingénieriste"
     ],
-    "correctAns": 1
+    "correctAns": 2
   },
   {
-    "question": "Le %s du livre a été réalisé par un artiste renommé.",
+    "question": "e %s est essentiel pour la création de sites web attrayants",
     "options": [
       "graphisme",
       "graphique",
@@ -36,16 +36,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Il faut %s régulièrement pour réussir aux examens.",
-    "options": [
-      "étudier",
-      "éducatif",
-      "étudiant"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "L'%s des langues étrangères peut ouvrir de nombreuses opportunités professionnelles.",
+    "question": "Mon amie fait une %s sur les oiseaux.",
     "options": [
       "étude",
       "étudiante",
@@ -54,61 +45,70 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Cette maison ancienne a été rénovée et est maintenant parfaitement %s.",
+    "question": "Elle est une %s en médecine.",
+    "options": [
+      "étudiant",
+      "étudiante",
+      "éducatifs"
+    ],
+    "correctAns": 1
+  },
+  {
+    "question": "La destruction de l'%s naturel des animaux sauvages menace leur survie.",
     "options": [
       "habitat",
-      "habitude",
-      "habitable"
+      "habitable",
+      "habitude"
     ],
-    "correctAns": 2
+    "correctAns": 0
   },
   {
-    "question": "L'hôtel où nous avons séjourné avait un personnel très %s.",
+    "question": "Bienvenue à l'%s de l'école.",
     "options": [
-      "accueillie",
-      "accueillant",
-      "accueil"
+      "accueilli",
+      "accueil",
+      "accueillir"
     ],
     "correctAns": 1
   },
   {
-    "question": "Ils %s regarder des films d'action.",
+    "question": "J'%s les animaux.",
     "options": [
-      "aimant",
+      "aime",
+      "amour",
+      "aimable"
+    ],
+    "correctAns": 0
+  },
+  {
+    "question": " L'%s est un sentiment puissant.",
+    "options": [
       "aimable",
-      "aiment"
+      "amour",
+      "aimablement"
+    ],
+    "correctAns": 1
+  },
+  {
+    "question": "La réunion %s à 9 heures",
+    "options": [
+      "commencement",
+      "commençant",
+      "commence"
     ],
     "correctAns": 2
   },
   {
-    "question": "Elle a accueilli %s ses invités à la réception de mariage.",
+    "question": "J'ai une  de base en informatique.",
     "options": [
-      "aiment",
-      "aimablement",
-      "amour"
-    ],
-    "correctAns": 1
-  },
-  {
-    "question": "Il a décidé de %s un nouveau chapitre de sa vie.",
-    "options": [
-      "commencement", 
-      "commencer",
-      "commençant"
-    ],
-    "correctAns": 1
-  },
-  {
-    "question": "Je %s très bien cette ville, j'y ai vécu pendant des années.",
-    "options": [
-      "connaisseur",
       "connais",
+      "connue",
       "connaissance"
     ],
     "correctAns": 1
   },
   {
-    "question": "Elle a reçu une lettre d'amour d'un %s.",
+    "question": " Je n'ai jamais vu cet homme auparavant, il est %s.",
     "options": [
       "inconnu",
       "connaissance",
@@ -117,7 +117,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Elle est une %s très populaire à la télévision.",
+    "question": "Elle est une %s très populaire à la télévision",
     "options": [
       "présentation",
       "présentatrice",
@@ -126,146 +126,146 @@ export const questions = [
     "correctAns": 1
   },
   {
-    "question": "Le designer va %s ses idées de conception au client.",
+    "question": "La bannière de l'école est un symbole %s de notre fierté.",
     "options": [
-      "présenter",
-      "présence",
-      "représentative"
+      "représentatif",
+      "représentateur",
+      "représenter"
     ],
-    "correctAns": 0
+    "correctAns": 1
   },
   {
-    "question": "Cette enquête a été menée auprès d'un échantillon %s de la population.",
+    "question": "La photo est claire et nette, elle est %s.",
     "options": [
-      "présentement",
       "représentation",
-      "représentatif"
+      "représentable",
+      "représenter"
     ],
-    "correctAns": 2
+    "correctAns": 1
   },
   {
-    "question": "Elle travaille %s sur un projet de recherche passionnant.",
+    "question": " Les %s sont pratiques pour écouter de la musique en déplacement.",
     "options": [
-      "présentement",
-      "présentable",
-      "présentateur"
+      "écouteurs",
+      "écoute",
+      "écouter"
     ],
     "correctAns": 0
   },
   {
-    "question": "J'aime écouter de la musique avec mes %s pendant mon trajet en métro.",
+    "question": "La %s de cette chanson est nécessaire pour mémoriser les paroles",
     "options": [
-      "écouter",
-      "écoute",
-      "écouteurs"
-    ],
-    "correctAns": 2
-  },
-  {
-    "question": "Cette expérience est %s pour vérifier les résultats.",
-    "options": [
+      "répétiteur",
       "répétition",
-      "répéter",
       "répétable"
     ],
+    "correctAns": 1
+  },
+  {
+    "question": "%s après moi : bonjour.",
+    "options": [
+      "Répète",
+      "répétition",
+      "répétable"
+    ],
+    "correctAns": 0
+  },
+  {
+    "question": " L'%s de la langue étrangère est amusant",
+    "options": [
+      "apprenant",
+      "apprendre",
+      "apprentissage"
+    ],
     "correctAns": 2
   },
   {
-    "question": "Pour apprendre une nouvelle langue, il faut %s les mots et les phrases régulièrement.",
+    "question": "La %s d'un bébé est un événement spécial",
     "options": [
-      "répétition",
-      "répéter",
-      "répétiteur"
-    ],
-    "correctAns": 1
-  },
-  {
-    "question": "Les enfants ont différentes méthodes d'%s en fonction de leur style d'apprentissage.",
-    "options": [
-      "apprentissage",
-      "apprendre",
-      "apprenante"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "La %s a augmenté dans cette région au cours des dernières années.",
-    "options": [
+      "naitre",
       "naissance",
-      "natalité",
-      "néonatalogie"
+      "natalité"
     ],
     "correctAns": 1
   },
   {
-    "question": "Les experts ont du mal à %s l'origine de l'incendie.",
+    "question": " Une pièce d'%s, comme un passeport, est nécessaire pour voyager à l'étranger",
     "options": [
       "identifier",
-      "identique",
-      "identifiant"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "Elle a un esprit %s et aime jouer à divers jeux en équipe.",
-    "options": [
-      "sport",
-      "sportivement",
-      "sportif"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "Elle aime %s le ballet depuis son plus jeune âge.",
-    "options": [
-      "danseur",
-      "danse",
-      "danser"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "Mon %s préféré vient de sortir un nouvel album.",
-    "options": [
-      "chanson",
-      "chanteur",
-      "chanter"
+      "identification",
+      "identité"
     ],
     "correctAns": 1
   },
   {
-    "question": "Les parents %s leur bébé avec du lait maternel ou du lait en poudre.",
+    "question": "Le %s est bon pour la santé",
     "options": [
-      "nourrissent",
+      "sport",
+      "sportif",
+      "sportivement"
+    ],
+    "correctAns": 0
+  },
+  {
+    "question": "Le %s est gracieux sur la scène",
+    "options": [
+      "danseur",
+      "danser",
+      "danse"
+    ],
+    "correctAns": 0
+  },
+  {
+    "question": " La %s française est délicieuse.",
+    "options": [
       "nourriture",
+      "nourrir",
       "nourrice"
     ],
     "correctAns": 0
   },
   {
-    "question": "Les entreprises peuvent %s des bureaux dans ce centre d'affaires.",
-    "options": [
-      "louer",
-      "locataire",
-      "location"
-    ],
-    "correctAns": 0
-  },
-  {
-    "question": "Le %s de cet appartement paie son loyer chaque mois.",
+    "question": " Le %s paie son loyer chaque mois",
     "options": [
       "location",
-      "loueur",
+      "louer",
       "locataire"
     ],
     "correctAns": 2
   },
   {
-    "question": "Le %s est écrit en chiffres arabes plutôt qu'en lettres.",
+    "question": "Le %s huit ressemble à un bonhomme",
     "options": [
-      "chiffrier",
+      "chiffrer",
       "chiffre",
-      "chiffrer"
+      "chiffrement"
+    ],
+    "correctAns": 1
+  },
+  {
+    "question": "Les paysages de l'%s sont très variés",
+    "options": [
+      "allemande",
+      "Allemagne",
+      "allemand"
+    ],
+    "correctAns": 1
+  },
+  {
+    "question": "J'apprends l'%s à l'école.",
+    "options": [
+      "espagnol",
+      "Espagne",
+      "espagnole"
+    ],
+    "correctAns": 0
+  },
+  {
+    "question": "Il aime une %s.",
+    "options": [
+      "brésilien",
+      "brésilienne",
+      "brésil"
     ],
     "correctAns": 1
   }
