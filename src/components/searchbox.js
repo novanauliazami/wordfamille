@@ -33,8 +33,10 @@ function SearchBox(props) {
   const handleSubmit = useCallback(e => {
     e.preventDefault()
     redirect("/word/" + (searchSuggest <= 0.1 ? searchSuggest[0].item.word : query))
+    redirect("/word/" + (searchSuggest <= 0.1 ? searchSuggest[0].item.word : query))
   }, [query])
 
+  
   
   return (
     <Combobox as="form" className="w-full max-w-md" value={selectedWord} onChange={setSelectedWord} onSubmit={handleSubmit}>
@@ -82,3 +84,4 @@ function SearchBox(props) {
 }
 
 export default SearchBox;
+
