@@ -37,14 +37,14 @@ function SearchBox(props) {
 
   
   return (
-    <Combobox as="form" value={selectedWord} onChange={setSelectedWord} onSubmit={handleSubmit}>
+    <Combobox as="form" className="w-full max-w-md" value={selectedWord} onChange={setSelectedWord} onSubmit={handleSubmit}>
       <div className="relative w-full">
         <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-base border border-accent">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <FaSearch />
           </div>
           <Combobox.Input
-            className={`block border-none focus:ring-0 text-sm pl-10 ${props.minimize ? "p-1.5" : "p-2-5"} rounded-lg`}
+            className={`block w-full border-none bg-inherit focus:ring-0 text-sm pl-10 ${props.minimize ? "p-1.5" : "p-2-5"} rounded-lg`}
             placeholder={props.label}
             onChange={(e) => setQuery(e.target.value)} />
           <button 

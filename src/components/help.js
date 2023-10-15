@@ -62,9 +62,9 @@ export default function Help() {
       id="help"
       className="max-w-4xl mx-auto my-8 p-4">
       <div className="py-2">
-        <hr className="border-t border-gray-200 my-3 md:my-4"></hr>
+        <hr className="border-t border-gray-200 my-3 max-w-sm mx-auto"></hr>
         <h3 className="text-2xl font-semibold mb-2 text-primary">PETUNJUK PENGGUNAAN</h3>
-        <p className="text-sm">
+        <p className="text-sm text-justify">
           Selamat datang di WORDFAMILLE.COM.
           Sebuah website yang dirancang untuk membantu Anda mengeksplorasi 
           dan memperkaya kosakata bahasa Perancis. Dengan menggunakan fitur 

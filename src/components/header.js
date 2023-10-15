@@ -15,7 +15,7 @@ export default function Header() {
   ]
 
   return (    
-      <Navbar className="bg-gradient-to-r from-secondary to-primary">
+      <Navbar className="md:px-2 px-4 bg-gradient-to-r from-secondary to-primary">
         <Navbar.Brand href="/">
           <Image
             alt="WordFamille Logo"
@@ -28,7 +28,7 @@ export default function Header() {
             WordFamille
           </span>
         </Navbar.Brand>
-        <Navbar.Toggle className="text-white focus:ring-none" />
+        <Navbar.Toggle className="text-gray-100 focus:ring-none focus:text-primary focus:bg-gray-100" />
         <Navbar.Collapse>
           {
             navlink.map((link, index) => {
@@ -36,7 +36,7 @@ export default function Header() {
                 <Navbar.Link
                   key={index}
                   href={link.target}
-                  className="text-white hover:text-gray-200 font-semibold text-lg"
+                  className="text-gray-200 hover:text-gray-100 font-semibold text-lg"
                 >
                   {link.label}
                 </Navbar.Link>
