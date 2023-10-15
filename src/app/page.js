@@ -11,6 +11,7 @@ export default function Home() {
           <Image
             src="/french-logo.png"
             width={224} height={224}
+            className="mb-4"
             alt="WordFamille Logo"
           />
           <SearchBox />

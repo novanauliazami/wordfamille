@@ -4,36 +4,7 @@ import Image from 'next/image'
 import {
   Navbar
 } from 'flowbite-react'
-import { FaBars, FaSearch } from 'react-icons/fa'
-import { useRouter } from 'next/navigation'
-import { useState, useCallback } from 'react'
-
-
-function SearchBox() {
-  const router = useRouter()
-  const [searchData, setSearchData] = useState()
-
-  const handleSubmit = useCallback(e => {
-    e.preventDefault()
-    router.push(encodeURI("/word/" + searchData))
-  }, [searchData])
-
-  return (
-    <form onSubmit={handleSubmit} className="flex w-full" id="searchHeader">
-      <button type="submit"
-        form="searchHeader"
-        className="inline-flex items-center px-2 text-sm text-white
-                 bg-primary border border-r-0 border-white rounded-l-md">
-        <FaSearch />
-      </button>
-      <input
-        type="text"
-        onChange={(e) => setSearchData(e.target.value)}
-        className="border-none rounded-none rounded-r-lg block flex-1 min-w-0 w-full text-sm p-1.5"
-        placeholder="CARI"/>
-    </form>
-  )
-}
+import SearchBox from '@/components/searchbox'
 
 
 export default function Header() {
@@ -65,7 +36,7 @@ export default function Header() {
                 <Navbar.Link
                   key={index}
                   href={link.target}
-                  className="text-white font-semibold text-lg"
+                  className="text-white hover:text-gray-200 font-semibold text-lg"
                 >
                   {link.label}
                 </Navbar.Link>
@@ -73,7 +44,7 @@ export default function Header() {
             })
           }
           <div className="flex order-first md:order-last max-w-full">
-            <SearchBox />
+            <SearchBox minimize/>
           </div>
         </Navbar.Collapse>
       </Navbar>

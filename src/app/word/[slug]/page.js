@@ -35,13 +35,13 @@ function DefinitionList({definitions}) {
         <div className="flex items-center space-x-4">
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-gray-900 truncate">
-                {definition.word} ({definition.wordClass})
+                <span className="font-semibold capitalize">{definition.word}</span> ({definition.wordClass})
             </p>
-            <p className="text-sm text-gray-500 truncate">
+            <p className="text-sm text-gray-500">
                 {definition.meaning}
             </p>
           </div>
-          <div className="inline-flex items-center text-base font-semibold text-gray-900">
+          <div className="inline-flex items-center text-base font-semibold text-gray-700">
               { num }
           </div>
         </div>
@@ -66,18 +66,18 @@ function DefinitionList({definitions}) {
 
 function DefinitionNotFound({params}) {
   return (
-    <div className="mx-auto px-2 my-8">
-      <div className="w-full max-w-md p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+    <div className="max-w-4xl mx-auto px-2 my-8">
+      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none">
             { decodeURI(params.slug) }
           </h5>
-          <Link href="/" className="text-sm font-bold">
+          <Link href="/" className="font-bold border py-1 px-2 text-accent border-accent hover:text-base hover:bg-accent rounded-md">
             Kembali
           </Link>
         </div>
-        <div className="border-t border-gray-200 py-3 sm:py-4">
-          <p className="text-sm font-medium truncate">
+        <div className="border-t border-gray-200 py-4 sm:py-6">
+          <p className="font-medium text-center">
             Kata Tidak Ditemukan
           </p>
         </div>
@@ -93,15 +93,12 @@ export default async function ShowWord({params}){
     return <DefinitionNotFound params={params} />
 
   return (
-    <div className="max-w-2xl mx-auto px-2 my-8">
-      <div className="w-full max-w-md p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+    <div className="max-w-4xl mx-auto px-2 my-8">
+      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
-            <h5 className="text-xl font-bold leading-none">
+            <h5 className="text-xl font-bold py-2 border-b border-accent leading-none">
               { wordFamily.word }
             </h5>
-            <span className="text-sm font-bold">
-                No
-            </span>
         </div>
         <DefinitionList definitions={wordFamily.family} />
       </div>
