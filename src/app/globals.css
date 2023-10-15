@@ -17,3 +17,9 @@
     @apply ring-accent border-accent;
   }
 }
+
+@layer components {
+  .option-button {
+    @apply px-4 py-2 text-center font-medium rounded-md text-sm inline-flex items-center border;
+  }
+}

@@ -99,7 +99,7 @@ export default async function ShowWord({params}){
             <h5 className="text-xl font-bold py-2 border-b border-accent leading-none">
               { wordFamily.word }
             </h5>
-        </div>
+        </div> 
         <DefinitionList definitions={wordFamily.family} />
       </div>
     </div>

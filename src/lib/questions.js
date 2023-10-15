@@ -99,7 +99,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": "J'ai une  de base en informatique.",
+    "question": "J'ai une %s de base en informatique.",
     "options": [
       "connais",
       "connue",

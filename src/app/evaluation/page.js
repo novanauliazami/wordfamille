@@ -2,20 +2,53 @@
 
 import reactStringReplace from 'react-string-replace'
 import { questions } from '@/lib/questions'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { PieChart, Pie, Cell, Label } from 'recharts';
+import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6';
+import { FaTimesCircle } from 'react-icons/fa';
 
-function ShowQuestions() {
-  const [currentQuestion, setcurrentQuestion] = useState(0)
-  const [correctAnswer, setCorrectAnswer] = useState(0)
-  const maxQuestion = questions.length
-  
+function VisualizeScore(correctAnswer, nQuestions) {
+  const data = [
+    {name: "correct", value: correctAnswer},
+    {name: "incorrect", value: nQuestions - correctAnswer}
+  ]
+
+  return (
+    <PieChart width={800} height={400}>
+      <Pie
+        data={data}
+        cx={120}
+        cy={200}
+        innerRadius={78}
+        outerRadius={96}
+        fill="#8884d8"
+        paddingAngle={5}
+        dataKey="value"
+      >
+        <Label value={`${correctAnswer}/${nQuestions}`} position="centerBottom" className="mb-2" fontSize="20px" />
+        <Label value="Soal Terjawab" position="centerTop" fontSize="12px"/>
+        <Cell fill="#16a34a" />
+        <Cell fill="#dc2626" />
+      </Pie>
+    </PieChart>
+  )
+}
+
+function Evaluation() {
+  const maxQuestion = 10
+  const [done, setDone] = useState(false)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answers, setAnswers] = useState([])
+
 
   const handleOptions = (e) => {
     const ans = e.target.value
-    if(ans == questions[currentQuestion].correctAns) {
-      setCorrectAnswer(correctAnswer + 1)
-    }
-    setcurrentQuestion(currentQuestion + 1)
+    setAnswers([
+      ...answers,
+      ans
+    ])
+
+    setCurrentQuestion(currentQuestion + 1)
   }
 
   const ShowOptions = (match, i) => {
@@ -37,45 +70,95 @@ function ShowQuestions() {
     )
   }
 
-  const Retry = () => {
+  const ShowQuestion = () => {
     return (
-      <div className="flex flex-col py-4 px-2 items-center justify-content-center space-y-2">
-        <p>Anda mendapatkan skor <span className="font-bold">{correctAnswer}/{maxQuestion}</span></p>
-        <button
-          onClick={(e) => {
-            setCorrectAnswer(0)
-            setcurrentQuestion(0)
-          }}
-          className="border border-accent bg-inherit px-3 py-1 rounded-md"
-        >
-          Coba Lagi?
-          </button>
+      <div className="py-5">
+        {reactStringReplace(questions[currentQuestion].question, "%s", ShowOptions)}
       </div>
     )
   }
 
-  return (
-    <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
-      <div className="flex items-center justify-between mb-4 py-4 border-b border-gray-200 text-md font-bold">
-        <h5 className="leading-none">
-          Pertanyaan#{currentQuestion+1}
-        </h5>
-        <span>
-            <span className="text-green-500">{correctAnswer}</span>/{maxQuestion}
-        </span>
-      </div>
-      <div className="py-2">
-        { currentQuestion < maxQuestion && reactStringReplace(questions[currentQuestion].question, "%s", ShowOptions) }
-        { currentQuestion >= maxQuestion && <Retry />}
-      </div>
-    </div>
-  )
-}
+  const ShowScore = () => {
+    const correctAnswer = answers.reduce((accumulator, ans, index) => {
+      return accumulator + ((ans == questions[index].correctAns) ? 1 : 0)
+    }, 0)
+    return VisualizeScore(correctAnswer, answers.length)
+  }
 
-function Evaluation() {
+  const ShowCorrection = () => {
+    return (
+      <>
+        <div className="mx-auto">
+          <ShowScore />
+        </div>
+        <ul role="list" className="divide-y divide-gray-200 space-y-4">
+          {answers.map((ans, index) => {
+            const question = questions[index]
+            return (
+              <li className="py-2" key={index}>
+                {reactStringReplace(question.question, "%s", (match, i) => {
+                  return "______"
+                })}
+                <div className="flex items-center py-2 justify-between">
+                  {
+                    question.options.map((option, index) => {
+                      const isCorrect = (ans == question.correctAns)
+                      if (index == question.correctAns) {
+                        return (
+                          <span key={index} className={`option-button border-green-500 ${isCorrect ? "bg-green-200 " : "bg-green-100"}`}>
+                            {option} {isCorrect ? <FaCircleCheck className="ml-2 text-green-700"/> : <FaRegCircleCheck className="ml-2 text-green-700"/>}
+                          </span>
+                        )
+                      }
+                      if (index == ans) {
+                        return (
+                          <span key={index} className="option-button bg-red-100 border-red-300">
+                            {option} <FaTimesCircle className="ml-2 text-red-500"/>
+                          </span>
+                        )
+                      }
+                      return (
+                        <span key={index} className="option-button">
+                            {option} <FaRegCircle className="ml-2"/>
+                        </span>
+                      )
+                      })
+                      
+                  }
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </>
+    )
+  }
+
+  const handleRetryButton = () => {
+    if (done) {
+      setAnswers([])
+      setCurrentQuestion(0)
+    }
+    setDone(!done)
+  }
+  useEffect(() => {
+    if (!(currentQuestion < maxQuestion))
+      setDone(true)
+  }, [currentQuestion])
+
   return (
-    <div className="max-w-4xl mx-auto px-2 my-8">
-      <ShowQuestions />
+    <div className="max-w-4xl mx-auto my-8">
+      <div className="w-full p-2 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+        <div className="flex items-center justify-between mb-4 py-2 border-b border-gray-200 text-md font-bold">
+          <h5 className="leading-none">
+            Evaluasi#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
+          </h5>
+          <button onClick={handleRetryButton} className="text-sm border text-gray-200 bg-primary px-3 py-1 rounded-md hover:bg-blue-700">
+            {done ? "Ulangi" : "Selesai"}
+          </button>
+        </div>
+        {!done ? <ShowQuestion /> : <ShowCorrection />}
+      </div>
     </div>
   )
 }
