@@ -30,22 +30,20 @@ function SearchBox(props) {
   const redirect = (to) => {
     router.push(encodeURI(to))
   } 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = ({id, name}) => {
     if(searchSuggest.length > 0) 
-      redirect(`/word/${searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : query}`)
-    redirect (`/word/${query}`)
+      redirect(`/word/${searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : name}`)
+    redirect (`/word/${name}`)
+    setSelectedWord(name)
   }
-  
+
   return (
-    <form className="w-full max-w-md" id="searchform" onSubmit={handleSubmit}>
-      <Combobox value={selectedWord} onChange={setSelectedWord} name="query">
+    <div className="w-full max-w-md">
+      <Combobox value={selectedWord} onChange={handleSubmit}>
         <div className="relative w-full">
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-base border border-accent">
             <button
-              type="submit"
               className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-              form="#searchform"
             >
               <FaSearch />
             </button>
@@ -68,22 +66,28 @@ function SearchBox(props) {
           leaveTo="opacity-0"
         >
           <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-base py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-            {searchSuggest.map((sugest) => (
+            {query.length > 0 && (
+              <Combobox.Option className="hidden" value={{ id: null, name: query }}>
+                {query}
+              </Combobox.Option>
+            )}
+            {searchSuggest.map((sugest, index) => (
               <Combobox.Option
-                onClick={() => redirect(`/word/${sugest.item.word}`)}
-                className="relative flex py-2 px-4 border-t text-gray-700"
-                key={sugest.refIndex} value={sugest.matches[0].value}>
+                className="relative flex ui-active:bg-gray-200 py-2 px-4 border-t text-gray-700"
+                key={sugest.refIndex} value={{id: index, name: sugest.item.word}}>
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaSearch />
                 </span>
+                ${sugest.item.word}
                 <ShowOption option={sugest} />
               </Combobox.Option>
             ))}
           </Combobox.Options>
         </Transition>
+        
         </div>
       </Combobox>
-    </form>
+    </div>
   )
 }
 

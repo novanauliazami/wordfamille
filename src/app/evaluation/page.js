@@ -7,6 +7,10 @@ import { PieChart, Pie, Cell, Label } from 'recharts';
 import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6';
 import { FaTimesCircle } from 'react-icons/fa';
 
+export const metadata = {
+  title: 'Evaluasi - Wordfamille',
+}
+
 function VisualizeScore(correctAnswer, nQuestions) {
   const data = [
     {name: "correct", value: correctAnswer},
@@ -156,7 +160,7 @@ function Evaluation() {
   }, [currentQuestion])
 
   return (
-    <div className="max-w-4xl mx-auto my-8">
+    <div className="container my-8">
       <div className="w-full p-2 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4 py-2 border-b border-gray-200 text-md font-bold">
           <h5 className="leading-none">

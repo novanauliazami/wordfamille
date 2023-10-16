@@ -27,7 +27,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": "e %s est essentiel pour la création de sites web attrayants",
+    "question": "Le %s est essentiel pour la création de sites web attrayants",
     "options": [
       "graphisme",
       "graphique",

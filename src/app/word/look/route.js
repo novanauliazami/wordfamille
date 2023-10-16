@@ -15,7 +15,13 @@ export async function GET(request) {
   }
 
   const result = wordFamilies.find((wordFamily) => {
-    return wordFamily.word.toLowerCase() === query.toLowerCase()
+    const loweredQuery = query.toLowerCase()
+    if (wordFamily.word.toLowerCase() === loweredQuery)
+      return true
+
+    return !!wordFamily.family.find((family) => {
+      return family.word.toLowerCase() == loweredQuery
+    })
   })
 
   if(result)

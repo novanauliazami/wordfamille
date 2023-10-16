@@ -3,6 +3,11 @@ import Link from "next/link"
 import { server } from '@/lib/config'
 import { FaRegTimesCircle } from "react-icons/fa"
 
+export async function generateMetadata({ params }) {
+  return {
+    title: `Definisi Kata ${params.slug} - Wordfamille`,
+  }
+}
 export async function generateStaticParams() {
   const wordFamilies = await getWordFamilies()
 
@@ -38,7 +43,7 @@ function DefinitionList({definitions}) {
             <p className="text-sm font-medium text-gray-900 truncate">
                 <span className="font-semibold capitalize">{definition.word}</span> ({definition.wordClass})
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="capitalize text-sm text-gray-500">
                 {definition.meaning}
             </p>
           </div>
@@ -67,7 +72,7 @@ function DefinitionList({definitions}) {
 
 function DefinitionNotFound({params}) {
   return (
-    <div className="max-w-4xl mx-auto px-2 my-8">
+    <div className="container px-2 my-8">
       <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none">
@@ -94,7 +99,7 @@ export default async function ShowWord({params}){
     return <DefinitionNotFound params={params} />
 
   return (
-    <div className="max-w-4xl mx-auto px-2 my-8">
+    <div className="container px-2 my-8">
       <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
             <h5 className="text-xl font-bold py-2 border-b border-accent leading-none">
