@@ -21,5 +21,5 @@ module.exports = {
       colors
     }
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('@headlessui/tailwindcss')],
 }
