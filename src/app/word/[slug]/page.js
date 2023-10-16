@@ -1,10 +1,32 @@
-'use client'
-
+import getWordFamilies from "@/lib/wordfamilies"
 import Link from "next/link"
-import { useState, useEffect } from 'react'
 import { server } from '@/lib/config'
 import { FaRegTimesCircle } from "react-icons/fa"
-import { useSearchParams } from 'next/navigation'
+
+export async function generateStaticParams() {
+  const wordFamilies = await getWordFamilies()
+
+  return wordFamilies.map((wordFamily) => {
+    return {
+      params: {
+        word: encodeURI(wordFamily.word.toLowerCase())
+      }
+    }
+  })
+}
+
+async function getWordFamily(query) {
+  const res = await fetch(`${server}/word/look?q=${query}`, {
+    next: {
+      revalidate: 3600
+    }
+  })
+  
+  if(!res.ok)
+    return undefined
+
+  return res.json()
+}
 
 function DefinitionList({definitions}) {
 
@@ -27,8 +49,6 @@ function DefinitionList({definitions}) {
       </li>
     )
   }
-
-
   return (
     <div className="flow-root">
       <ul role="list" className="divide-y divide-gray-200">
@@ -45,50 +65,43 @@ function DefinitionList({definitions}) {
   )
 }
 
-function NotFound() {
+function DefinitionNotFound({params}) {
   return (
-    <p className="font-medium text-center">
-      Kata Tidak Ditemukan
-    </p>
+    <div className="max-w-4xl mx-auto px-2 my-8">
+      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
+        <div className="flex items-center justify-between mb-4">
+          <h5 className="text-xl font-bold leading-none">
+            { decodeURI(params.slug) }
+          </h5>
+          <Link href="/" className="text-lg">
+            <FaRegTimesCircle />
+          </Link>
+        </div>
+        <div className="border-t border-gray-200 py-4 sm:py-6">
+          <p className="font-medium text-center">
+            Kata Tidak Ditemukan
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 
-export default  function ShowWord() {
+export default async function ShowWord({params}){
+  const wordFamily = await getWordFamily(params.slug)
   
-  const searchParams = useSearchParams()
-  const query = searchParams.get("q")
-  const [wordFamily, setWordFamily] = useState({
-    word: query,
-    found: false,
-    family: null
-  })
-  
-  useEffect(() => {
-    fetch(`${server}/word/look?q=${query}`)
-      .then((res) => {
-        if(res.ok) {
-          const data = res.json()
-          setWordFamily({
-            word: data.word,
-            found: true,
-            family: data.family
-          })
-        }
-      })
-  })
+  if (!wordFamily)
+    return <DefinitionNotFound params={params} />
 
   return (
     <div className="max-w-4xl mx-auto px-2 my-8">
       <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
-            <h5 className="capitalize text-xl font-bold py-2 border-b border-accent leading-none">
+            <h5 className="text-xl font-bold py-2 border-b border-accent leading-none">
               { wordFamily.word }
             </h5>
-            <Link href="/" className="text-lg">
-              <FaRegTimesCircle />
-            </Link>
         </div> 
-          {wordFamily.found ? <DefinitionList definitions={wordFamily.family} /> : <NotFound />}
+        <DefinitionList definitions={wordFamily.family} />
       </div>
     </div>
   )
