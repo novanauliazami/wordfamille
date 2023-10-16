@@ -28,7 +28,6 @@ function SearchBox(props) {
   }, [query])
 
   const redirect = (to) => {
-
     router.push(encodeURI(to))
   } 
   const handleSubmit = (e) => {
