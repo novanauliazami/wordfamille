@@ -73,7 +73,7 @@ function SearchBox(props) {
             )}
             {searchSuggest.map((sugest, index) => (
               <Combobox.Option
-                className="relative flex ui-active:bg-gray-200 py-2 px-4 border-t text-gray-700"
+                className="relative flex py-2 px-4 border-t text-gray-700"
                 key={sugest.refIndex} value={{id: index, name: sugest.item.word}}>
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaSearch />
