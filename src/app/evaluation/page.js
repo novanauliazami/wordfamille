@@ -7,10 +7,6 @@ import { PieChart, Pie, Cell, Label } from 'recharts';
 import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6';
 import { FaTimesCircle } from 'react-icons/fa';
 
-export const metadata = {
-  title: 'Evaluasi - Wordfamille',
-}
-
 function VisualizeScore(correctAnswer, nQuestions) {
   const data = [
     {name: "correct", value: correctAnswer},
