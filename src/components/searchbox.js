@@ -1,5 +1,5 @@
 import { server } from '@/lib/config' 
-import { useState, useEffect, Fragment, useCallback } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { FaSearch } from 'react-icons/fa'
 import { FaRegCircleXmark } from 'react-icons/fa6'
@@ -28,29 +28,33 @@ function SearchBox(props) {
   }, [query])
 
   const redirect = (to) => {
+
     router.push(encodeURI(to))
   } 
-  const handleSubmit = useCallback(e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     if(searchSuggest.length > 0) 
-      redirect("/word/" + (searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : query))
-    redirect ("/word/" + query)
-  }, [query])
+      redirect(`/word?q=${searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : query}`)
+    redirect (`/word?q=${query}`)
+  }
   
   return (
     <Combobox as="form" className="w-full max-w-md" value={selectedWord} onChange={setSelectedWord} onSubmit={handleSubmit}>
       <div className="relative w-full">
         <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-base border border-accent">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <button
+            type="submit"
+            className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
             <FaSearch />
-          </div>
+          </button>
           <Combobox.Input
             className={`block w-full border-none bg-inherit focus:ring-0 text-sm pl-10 ${props.minimize ? "p-1.5" : "p-2-5"} rounded-lg`}
             placeholder={props.label}
             onChange={(e) => setQuery(e.target.value)} />
           <button 
             type="button"
-            onClick={(e) => setQuery("")}
+            
             className={`absolute inset-y-0 right-0 flex items-center pr-3 ${query.length > 0 ? "  " : "hidden"}`}
           >
             <FaRegCircleXmark />
@@ -61,13 +65,12 @@ function SearchBox(props) {
         leave="transition ease-in duration-100"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        afterLeave={() => setQuery("")}
       >
         <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-base py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
           {searchSuggest.map((sugest) => (
             <Combobox.Option
-              onClick={() => redirect("/word/" + sugest.item.word)}
-              className="relative flex cursor-default select-none py-2 px-4 border-t text-gray-700"
+              onClick={() => redirect(`/word?q=${sugest.item.word}`)}
+              className="relative flex py-2 px-4 border-t text-gray-700"
               key={sugest.refIndex} value={sugest.matches[0].value}>
               <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <FaSearch />

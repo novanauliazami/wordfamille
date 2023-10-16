@@ -2,20 +2,11 @@ import getWordFamilies from "@/lib/wordfamilies"
 import Link from "next/link"
 import { server } from '@/lib/config'
 import { FaRegTimesCircle } from "react-icons/fa"
-
-export async function generateStaticParams() {
-  const wordFamilies = await getWordFamilies()
-
-  return wordFamilies.map((wordFamily) => {
-    return {
-      params: {
-        word: encodeURI(wordFamily.word.toLowerCase())
-      }
-    }
-  })
-}
+import { useSearchParams } from 'next/navigation'
 
 async function getWordFamily(query) {
+  if(!query)
+    return null
   const res = await fetch(`${server}/word/look?q=${query}`, {
     next: {
       revalidate: 3600
@@ -23,7 +14,7 @@ async function getWordFamily(query) {
   })
   
   if(!res.ok)
-    return undefined
+    return null
 
   return res.json()
 }
@@ -87,8 +78,10 @@ function DefinitionNotFound({params}) {
   )
 }
 
-export default async function ShowWord({params}){
-  const wordFamily = await getWordFamily(params.slug)
+export default async function ShowWord({params}) {
+  const searchParams = useSearchParams()
+  const query = searchParams.get("q")
+  const wordFamily = await getWordFamily(query)
   
   if (!wordFamily)
     return <DefinitionNotFound params={params} />
