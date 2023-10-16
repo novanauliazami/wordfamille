@@ -1,6 +1,7 @@
 import getWordFamilies from "@/lib/wordfamilies"
 import Link from "next/link"
 import { server } from '@/lib/config'
+import { FaRegTimesCircle } from "react-icons/fa"
 
 export async function generateStaticParams() {
   const wordFamilies = await getWordFamilies()
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 async function getWordFamily(query) {
-  const res = await fetch(`${server}/word?q=${query}`, {
+  const res = await fetch(`${server}/word/look?q=${query}`, {
     next: {
       revalidate: 3600
     }
@@ -72,8 +73,8 @@ function DefinitionNotFound({params}) {
           <h5 className="text-xl font-bold leading-none">
             { decodeURI(params.slug) }
           </h5>
-          <Link href="/" className="font-bold border py-1 px-2 text-accent border-accent hover:text-base hover:bg-accent rounded-md">
-            Kembali
+          <Link href="/" className="text-">
+            <FaRegTimesCircle />
           </Link>
         </div>
         <div className="border-t border-gray-200 py-4 sm:py-6">

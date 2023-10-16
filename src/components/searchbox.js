@@ -32,11 +32,10 @@ function SearchBox(props) {
   } 
   const handleSubmit = useCallback(e => {
     e.preventDefault()
-    redirect("/word/" + (searchSuggest <= 0.1 ? searchSuggest[0].item.word : query))
-    redirect("/word/" + (searchSuggest <= 0.1 ? searchSuggest[0].item.word : query))
+    if(searchSuggest.length > 0) 
+      redirect("/word/" + (searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : query))
+    redirect ("/word/" + query)
   }, [query])
-
-  
   
   return (
     <Combobox as="form" className="w-full max-w-md" value={selectedWord} onChange={setSelectedWord} onSubmit={handleSubmit}>
@@ -62,7 +61,7 @@ function SearchBox(props) {
         leave="transition ease-in duration-100"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        afterLeave={() => setQuery('')}
+        afterLeave={() => setQuery("")}
       >
         <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-base py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
           {searchSuggest.map((sugest) => (
@@ -84,4 +83,3 @@ function SearchBox(props) {
 }
 
 export default SearchBox;
-

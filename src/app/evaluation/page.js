@@ -34,12 +34,20 @@ function VisualizeScore(correctAnswer, nQuestions) {
   )
 }
 
+function shuffleArray (array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
 function Evaluation() {
-  const maxQuestion = 10
+  const maxQuestion = questions.length
   const [done, setDone] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
-
 
   const handleOptions = (e) => {
     const ans = e.target.value
@@ -56,7 +64,7 @@ function Evaluation() {
       <form className="inline-block">
         <select
           onChange={handleOptions}
-          className="bg-inherit border-none border-b border-gray-200 text-sm rounded-md focus:ring-accent"
+          className="bg-inherit border-b border-gray-200 text-sm rounded-md focus:ring-accent"
           value=""
         >
           <option value="" selected disabled hidden>Jawab</option>
@@ -99,27 +107,27 @@ function Evaluation() {
                 {reactStringReplace(question.question, "%s", (match, i) => {
                   return "______"
                 })}
-                <div className="flex items-center py-2 justify-between">
+                <div className="flex flex-wrap items-center py-2 justify-between space-y-2">
                   {
                     question.options.map((option, index) => {
                       const isCorrect = (ans == question.correctAns)
                       if (index == question.correctAns) {
                         return (
                           <span key={index} className={`option-button border-green-500 ${isCorrect ? "bg-green-200 " : "bg-green-100"}`}>
-                            {option} {isCorrect ? <FaCircleCheck className="ml-2 text-green-700"/> : <FaRegCircleCheck className="ml-2 text-green-700"/>}
+                            {option} {isCorrect ? <FaCircleCheck className="ml-auto lg:ml-2 text-green-700"/> : <FaRegCircleCheck className="ml-auto text-green-700"/>}
                           </span>
                         )
                       }
                       if (index == ans) {
                         return (
                           <span key={index} className="option-button bg-red-100 border-red-300">
-                            {option} <FaTimesCircle className="ml-2 text-red-500"/>
+                            {option} <FaTimesCircle className="ml-auto lg:ml-2 text-red-500"/>
                           </span>
                         )
                       }
                       return (
                         <span key={index} className="option-button">
-                            {option} <FaRegCircle className="ml-2"/>
+                            {option} <FaRegCircle className="ml-auto lg:ml-2"/>
                         </span>
                       )
                       })
@@ -138,6 +146,7 @@ function Evaluation() {
     if (done) {
       setAnswers([])
       setCurrentQuestion(0)
+      shuffleArray(questions)
     }
     setDone(!done)
   }
