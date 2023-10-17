@@ -462,6 +462,22 @@
         "meaning": "mengeja"
       },
       {
+        "word": "Epelable",
+        "wordClass": "adj",
+        "meaning": "dapat diucapkan atau di-eja"
+      },
+      {
+        "word": "l'epelle",
+        "wordClass": "n.m",
+        "meaning": "huruf yang diucapkan satu per satu"
+      },
+
+      {
+        "word": "re-epeler",
+        "wordClass": "v.intr",
+        "meaning": "mengulang, mengucapkan atau mengeja kembali"
+      },
+      {
         "word": "Epelation",
         "wordClass": "n.f",
         "meaning": "pengucapan/ ejaan"
@@ -815,6 +831,11 @@
         "word": "ecounter",
         "wordClass": "v.intr",
         "meaning": "mendengarkan"
+      },
+      {
+        "word": "ecoutable",
+        "wordClass": "adj",
+        "meaning": "dapat didengarkan"
       },
       {
         "word": "ecouter",
