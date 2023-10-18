@@ -1,21 +1,27 @@
 'use client'
 
+import { Fragment } from 'react'
 import Image from 'next/image'
-import {
-  Navbar
-} from 'flowbite-react'
+import { useTranslations } from 'next-intl'
+import { useRouter, usePathname } from 'next-intl/client'
+import { Navbar } from 'flowbite-react'
 import SearchBox from '@/components/searchbox'
+import { Menu, Transition } from '@headlessui/react'
+import { HiLanguage } from 'react-icons/hi2'
 
-export default function Header() {
+export default function Header({locale}) {
+  const t = useTranslations("header")
+  const router = useRouter()
+  const pathname = usePathname()
   const navlink = [
-    {label: "Beranda", target: "/"},
-    {label: "Evaluasi", target: "/evaluation"},
-    {label: "Bantuan", target: "#help"}
+    {label: t("home"), target: "/"},
+    {label: t("evaluation"), target: "/evaluation"},
+    {label: t("help"), target: "#help"}
   ]
 
-  return (    
-    <Navbar className="md:px-2 px-4 bg-gradient-to-r from-secondary to-primary">
-      <Navbar.Brand href="/">
+  return (
+    <Navbar className="bg-gradient-to-r from-secondary to-primary">
+      <Navbar.Brand href="/" className="grow">
         <Image
           alt="WordFamille Logo"
           className="mr-3 h-6 sm:h-9"
@@ -27,7 +33,7 @@ export default function Header() {
           WordFamille
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle className="text-gray-100 focus:ring-none focus:text-primary focus:bg-gray-100" />
+      <Navbar.Toggle className="order-3  text-gray-200 hover:bg-opacity-30 focus:ring-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" />
       <Navbar.Collapse>
         {
           navlink.map((link, index) => {
@@ -43,9 +49,42 @@ export default function Header() {
           })
         }
         <div className="flex order-first md:order-last max-w-full">
-          <SearchBox minimize />
+          <SearchBox label={t("search")} minimize />
         </div>
       </Navbar.Collapse>
+      <Menu as="div" className="relative mx-2 inline-block text-left">
+        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-opacity-20 py-1 px-2 text-xl font-bold text-gray-200 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <HiLanguage/>
+        </Menu.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Item>
+              <button
+                className="w-full px-2 py-2"
+                locale="id"
+                onClick={() => router.replace(pathname, {locale: "id"})}>
+                {locale == "id" ? "Bahasa Indonesia": "Indonesien"}
+              </button>
+            </Menu.Item>
+            <Menu.Item>
+              <button
+                className="w-full px-2 py-2"
+                locale="fr"
+                onClick={() => router.replace(pathname, {locale: "fr"})}>
+                {locale == "id" ? "Bahasa Perancis" : "Francais"}
+              </button>
+            </Menu.Item>
+          </Menu.Items>
+        </Transition>
+      </Menu>
     </Navbar>
   )
 }

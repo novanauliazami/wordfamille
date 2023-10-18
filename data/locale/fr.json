@@ -1,0 +1,24 @@
+{
+  "header": {
+    "home": "Accueil",
+    "evaluation": "Exercices",
+    "help": "Aide",
+    "search": "RECHERCHE"
+  },
+  "help": {
+    "title":"Instructions D'untilisation",
+    "subtitle": "Bienvenue sur WORDFAMILLE.COM. Un site conçu pour vous aider à explorer et enrichir votre vocabulaire en français. En utilisant notre fonction de recherche, vous pouvez facilement trouver des  informations sur les dérivations des mots, leurs significations, et les types de mots en français. Voici des instructions pour vous aider à utiliser ce site de manière efficace",
+    "step1": "Entrez un Mot",
+    "step1Detail": "Saisissez le mot que vous souhaitez rechercher dans la boîte de recherche sur la page d'accueil.",
+    "step2": "Cliquez sur l'icône de Recherche",
+    "step2Detail": "Appuyez sur le bouton \"Rechercher\" ou utilisez la touche \"Entrée\" de votre clavier.",
+    "step3": "Résultats de la Recherche",
+    "step3Detail": "Les résultats de votre recherche seront affichés dans différentes catégories telles que \"Famille de mots en français\", \"Traduction\", et \"Types de mots\"."
+  },
+  "evaluation": {
+    "title": "Exercices",
+    "retry": "Recommenez",
+    "done": "Fait",
+    "answer": "Repondre"
+  }
+}

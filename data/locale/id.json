@@ -1,0 +1,24 @@
+{
+  "header": {
+    "home": "Beranda",
+    "evaluation": "Evaluasi",
+    "help": "Bantuan",
+    "search": "CARI"
+  },
+  "help": {
+    "title": "Petunjuk Penggunaan",
+    "subtitle":"Selamat datang di WORDFAMILLE.COM. Sebuah website yang dirancang untuk membantu Anda mengeksplorasi dan memperkaya kosakata bahasa Perancis. Dengan menggunakan fitur pencarian kami, Anda dapat dengan mudah menemukan informasi  turunan kata, makna, dan jenis kata bahasa Perancis. Berikut adalah petunjuk penggunaan untuk membantu Anda memanfaatkan situs ini dengan efektif.",
+    "step1": "Masukan Kata",
+    "step1Detail": "Masukan kata yang ingin Anda cari di kotak pencarian di halaman utama.",
+    "step2": "Tekan Icon Pencarian",
+    "step2Detail": "Tekan tombol \"cari\" atau tekan tombol \"Enter\" pada keyboard Anda.",
+    "step3": "Hasil Pencarian",
+    "step3Detail": "Hasil pencarian akan ditampilkan dalam beberapa kategori seperti \"Keluarga kata bahasa Perancis\", \"Terjemahan\", dan \"Jenis Kata.\""
+  },
+  "evaluation": {
+    "title": "Evaluasi",
+    "retry": "Ulangi",
+    "done": "Selesai",
+    "answer": "Jawab"
+  }
+}

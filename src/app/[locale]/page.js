@@ -6,7 +6,7 @@ import SearchBox from '@/components/searchbox'
 export default function Home() {
   return (
     <main>
-      <section className="bg-base min-h-screen">
+      <section className="bg-base container min-h-screen">
         <div className="flex flex-col py-8 px-2 items-center justify-content-center">
           <Image
             src="/french-logo.png"
@@ -14,7 +14,7 @@ export default function Home() {
             className="mb-4"
             alt="WordFamille Logo"
           />
-          <SearchBox />
+          <SearchBox label="Masukan kata kerja dalam bahasa Perancis"/>
         </div>
       </section>
     </main>
