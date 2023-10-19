@@ -5,6 +5,9 @@
     "help": "Aide",
     "search": "RECHERCHE"
   },
+  "index": {
+    "search": "Etrez le mots"
+  },
   "help": {
     "title":"Instructions D'untilisation",
     "subtitle": "Bienvenue sur WORDFAMILLE.COM. Un site conçu pour vous aider à explorer et enrichir votre vocabulaire en français. En utilisant notre fonction de recherche, vous pouvez facilement trouver des  informations sur les dérivations des mots, leurs significations, et les types de mots en français. Voici des instructions pour vous aider à utiliser ce site de manière efficace",

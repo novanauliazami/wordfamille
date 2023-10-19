@@ -9,10 +9,49 @@ import SearchBox from '@/components/searchbox'
 import { Menu, Transition } from '@headlessui/react'
 import { HiLanguage } from 'react-icons/hi2'
 
-export default function Header({locale}) {
-  const t = useTranslations("header")
+function LanguageOption({locale}) {
   const router = useRouter()
   const pathname = usePathname()
+  return (
+    <Menu as="div" className="relative mx-2 inline-block text-left">
+      <Menu.Button className="inline-flex w-full justify-center rounded-md bg-opacity-20 py-1 px-2 text-xl font-bold text-gray-200 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        <HiLanguage/>
+      </Menu.Button>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Item>
+            <button
+              className="w-full flex px-2 py-2 items-center ui-active:bg-gray-200"
+              locale="id"
+              onClick={() => router.replace(pathname, {locale: "id"})}>
+              <HiLanguage className="mr-2 w-5 h-5" />
+              {locale == "id" ? "Bahasa Indonesia": "Indonesien"}
+            </button>
+          </Menu.Item>
+          <Menu.Item>
+            <button
+              className="w-full flex px-2 py-2 items-center ui-active:bg-gray-200"
+              locale="fr"
+              onClick={() => router.replace(pathname, {locale: "fr"})}>
+              <HiLanguage className="mr-2 w-5 h-5" />
+              {locale == "id" ? "Bahasa Perancis" : "Francais"}
+            </button>
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+  )
+}
+export default function Header({locale}) {
+  const t = useTranslations("header")
   const navlink = [
     {label: t("home"), target: "/"},
     {label: t("evaluation"), target: "/evaluation"},
@@ -33,7 +72,10 @@ export default function Header({locale}) {
           WordFamille
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle className="order-3  text-gray-200 hover:bg-opacity-30 focus:ring-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" />
+      <div className="flex items-center md:order-3">
+        <LanguageOption locale={locale} />
+        <Navbar.Toggle className="text-gray-200 hover:bg-opacity-30 focus:ring-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75" />
+      </div>
       <Navbar.Collapse>
         {
           navlink.map((link, index) => {
@@ -41,7 +83,7 @@ export default function Header({locale}) {
               <Navbar.Link
                 key={index}
                 href={link.target}
-                className="text-gray-200 hover:text-gray-100 font-semibold text-lg"
+                className="text-gray-200 w-full hover:text-gray-100 hover:bg-opacity-30 border-b-0 md:border-t-0 border-t-1 font-semibold text-lg"
               >
                 {link.label}
               </Navbar.Link>
@@ -52,39 +94,6 @@ export default function Header({locale}) {
           <SearchBox label={t("search")} minimize />
         </div>
       </Navbar.Collapse>
-      <Menu as="div" className="relative mx-2 inline-block text-left">
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-opacity-20 py-1 px-2 text-xl font-bold text-gray-200 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-          <HiLanguage/>
-        </Menu.Button>
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <Menu.Item>
-              <button
-                className="w-full px-2 py-2"
-                locale="id"
-                onClick={() => router.replace(pathname, {locale: "id"})}>
-                {locale == "id" ? "Bahasa Indonesia": "Indonesien"}
-              </button>
-            </Menu.Item>
-            <Menu.Item>
-              <button
-                className="w-full px-2 py-2"
-                locale="fr"
-                onClick={() => router.replace(pathname, {locale: "fr"})}>
-                {locale == "id" ? "Bahasa Perancis" : "Francais"}
-              </button>
-            </Menu.Item>
-          </Menu.Items>
-        </Transition>
-      </Menu>
     </Navbar>
   )
 }

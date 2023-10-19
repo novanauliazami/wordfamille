@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import SearchBox from '@/components/searchbox'
+import { useTranslations } from 'next-intl'
 
 export default function Home() {
+  const t = useTranslations("index")
   return (
     <main>
       <section className="bg-base container min-h-screen">
@@ -14,7 +16,7 @@ export default function Home() {
             className="mb-4"
             alt="WordFamille Logo"
           />
-          <SearchBox label="Masukan kata kerja dalam bahasa Perancis"/>
+          <SearchBox label={t("search")}/>
         </div>
       </section>
     </main>
