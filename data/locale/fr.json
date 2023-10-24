@@ -3,13 +3,13 @@
     "home": "Accueil",
     "evaluation": "Exercices",
     "help": "Aide",
-    "search": "RECHERCHE"
+    "search": "RECHERCHER"
   },
   "index": {
     "search": "Etrez le mots"
   },
   "help": {
-    "title":"Instructions D'untilisation",
+    "title":"Le Mode d'Emploi",
     "subtitle": "Bienvenue sur WORDFAMILLE.COM. Un site conçu pour vous aider à explorer et enrichir votre vocabulaire en français. En utilisant notre fonction de recherche, vous pouvez facilement trouver des  informations sur les dérivations des mots, leurs significations, et les types de mots en français. Voici des instructions pour vous aider à utiliser ce site de manière efficace",
     "step1": "Entrez un Mot",
     "step1Detail": "Saisissez le mot que vous souhaitez rechercher dans la boîte de recherche sur la page d'accueil.",
@@ -20,6 +20,7 @@
   },
   "evaluation": {
     "title": "Exercices",
+    "instructions": "Comprenez le sens et choisissez le mot approprie en fonction du contexte de la question ci-dessous dans la colonne vide.",
     "retry": "Recommenez",
     "done": "Fait",
     "answer": "Repondre"

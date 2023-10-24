@@ -160,13 +160,20 @@ function Evaluation() {
   return (
     <div className="container lg:max-w-4xl mx-auto my-8">
       <div className="w-full p-2 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
-        <div className="flex items-center justify-between mb-4 py-2 border-b border-gray-200 text-md font-bold">
-          <h5 className="leading-none">
-            {t("title")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
-          </h5>
-          <button onClick={handleRetryButton} className="text-sm border text-gray-200 bg-primary px-3 py-1 rounded-md hover:bg-blue-700">
-            {done ? t("retry") : t("done")}
-          </button>
+        <div className="mb-4 py-2 border-b border-gray-200">
+          <div className="flex items-center justify-between">
+            <h5 className="text-md font-bold">
+              {t("title")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
+            </h5>
+            <button
+              onClick={handleRetryButton}
+              className="text-sm font-bold border text-gray-200 bg-primary px-3 py-1 rounded-md hover:bg-blue-700">
+              {done ? t("retry") : t("done")}
+            </button>
+          </div>
+          <p className="font-medium text-sm md:max-w-[70%]">
+            {t("instructions")}
+          </p>
         </div>
         {!done ? <ShowQuestion /> : <ShowCorrection />}
       </div>

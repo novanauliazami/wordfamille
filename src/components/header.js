@@ -54,8 +54,7 @@ export default function Header({locale}) {
   const t = useTranslations("header")
   const navlink = [
     {label: t("home"), target: "/"},
-    {label: t("evaluation"), target: "/evaluation"},
-    {label: t("help"), target: "#help"}
+    {label: t("evaluation"), target: "/evaluation"}
   ]
 
   return (

@@ -20,6 +20,7 @@
   },
   "evaluation": {
     "title": "Evaluasi",
+    "instructions": "Pahami makna dan pilihlah kata yang tepat sesuai konteks soal di bawah ini pada kolom yang kosong.",
     "retry": "Ulangi",
     "done": "Selesai",
     "answer": "Jawab"
