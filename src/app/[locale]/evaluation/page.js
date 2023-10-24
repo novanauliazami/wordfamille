@@ -161,7 +161,7 @@ function Evaluation() {
     <div className="container lg:max-w-4xl mx-auto my-8">
       <div className="w-full p-2 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="mb-4 py-2 border-b border-gray-200">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between my-1">
             <h5 className="text-md font-bold">
               {t("title")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
             </h5>
@@ -171,7 +171,7 @@ function Evaluation() {
               {done ? t("retry") : t("done")}
             </button>
           </div>
-          <p className="font-medium text-sm md:max-w-[70%]">
+          <p className="text-md md:max-w-[70%]">
             {t("instructions")}
           </p>
         </div>

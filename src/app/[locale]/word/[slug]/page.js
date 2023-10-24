@@ -70,43 +70,30 @@ function DefinitionList({definitions}) {
   )
 }
 
-function DefinitionNotFound({params}) {
+function DefinitionNotFound() {
   return (
-    <div className="container lg:max-w-4xl px-2 my-8">
-      <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
-        <div className="flex items-center justify-between mb-4">
-          <h5 className="text-xl font-bold leading-none">
-            { decodeURI(params.slug) }
-          </h5>
-          <Link href="/" className="text-lg">
-            <FaRegTimesCircle />
-          </Link>
-        </div>
-        <div className="border-t border-gray-200 py-4 sm:py-6">
-          <p className="font-medium text-center">
-            Kata Tidak Ditemukan
-          </p>
-        </div>
-      </div>
-    </div>
+    <p className="font-medium text-center">
+      Kata Tidak Ditemukan
+    </p>
   )
 }
 
-export default async function ShowWord({params}){
+export default async function ShowWord({params}) {
   const wordFamily = await getWordFamily(params.slug)
+  const notFound = !wordFamily
   
-  if (!wordFamily)
-    return <DefinitionNotFound params={params} />
-
   return (
     <div className="container lg:max-w-4xl mx-auto px-2 my-8">
       <div className="w-full p-4 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
         <div className="flex items-center justify-between mb-4">
-            <h5 className="text-xl font-bold py-2 border-b border-accent leading-none">
-              { wordFamily.word }
+            <h5 className="text-xl font-bold py-2 border-b-2 border-accent leading-none">
+              {notFound ?  decodeURI(params.slug) : wordFamily.word}
             </h5>
+            <Link href="/" className="text-lg">
+              <FaRegTimesCircle />
+            </Link>
         </div> 
-        <DefinitionList definitions={wordFamily.family} />
+        {notFound ? (<DefinitionNotFound />) : (<DefinitionList definitions={wordFamily.family} />)}
       </div>
     </div>
   )
