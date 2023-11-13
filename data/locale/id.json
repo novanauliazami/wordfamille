@@ -8,11 +8,12 @@
   },
   "index": {
     "tagline": "Explorasi Bahasa Perancis: Temukan Keluarga Kata Bahasa Perancis",
-    "tagline_description": "Selamat datang di wordfamille.com: pusat eksplorasi bahasa Perancis! Temukan kekayaan turunan kata, jenis kata, terjemahan, hingga latihan kosakata. Tunjukan semangat belajar bahasa Perancis dan nikmati pesona kata-kata Perancis yang unik!",
+    "tagline_description": "Selamat datang di Wordfamille.com: pusat eksplorasi bahasa Perancis! Temukan kekayaan turunan kata, jenis kata, terjemahan, hingga latihan kosakata. Tunjukan semangat belajar bahasa Perancis dan nikmati pesona kata-kata Perancis yang unik!",
     "cta": "Mulai",
     "search": "Masukan kata kerja dalam bahasa Perancis"
   },
   "about": {
+    "title": "Tentang Kami",
     "whatis": "Apa itu wordfamille.com",
     "whatis_desc": "WordFamille.com adalah portal website Mesin pencarian kata Bahasa Perancis gratis untuk pembelajar bahasa perancis pemula di Universitas Negeri Semarang. Didesain menarik sesuai RPS dan Buku Tendance A1, dengan lebih dari 35 akar kata dan 150+ turunan kata keluarga kata. Keunggulan? Akses mudah dari berbagai perangkat, panduan penggunaan, kelompok kata, terjemahan, dan evaluasi pembelajaran. Perkaya pemahaman Bahasa Perancis Anda di WordFamille.com!",
     "purpose": "Tujuan",

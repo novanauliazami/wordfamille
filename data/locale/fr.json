@@ -7,6 +7,7 @@
     "search": "RECHERCHER"
   },
   "about": {
+    "title": "À Propos de Nous",
     "whatis": "À Propos de Nous",
     "whatis_desc": "WordFamille.com est un portail web de recherche de mots en français gratuit destiné aux apprenants débutants en français à l'Université Negeri Semarang. Conçu de manière attrayante selon le Programme d'Études (RPS) et le livre Tendance A1, avec plus de 35 racines de mots et plus de 150 dérivés de familles de mots. Les points forts ? Un accès facile depuis divers appareils, un guide d'utilisation, des groupes de mots, des traductions et une évaluation de l'apprentissage. Enrichissez votre compréhension du français sur WordFamille.com!",
     "purpose": "L'objectif",
@@ -16,7 +17,7 @@
   },
   "index": {
     "tagline": "Exploration de la langue française: Découvrez le mots de la meme famille en Français",
-    "tagline_description": "Bienvenue sur wordfamille.com : le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
+    "tagline_description": "Bienvenue sur Wordfamille.com : le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
     "cta": "Commensez",
     "search": "Etrez le mots"
   },
