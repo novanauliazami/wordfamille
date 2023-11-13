@@ -46,11 +46,10 @@ export default function Help() {
   }
 
   return (
-    <section
-      id="help"
+    <main
       className="container lg:max-w-4xl mx-auto my-8 p-4">
       <div className="py-2">
-        <hr className="border-t border-gray-200 my-3 max-w-sm mx-auto"></hr>
+        <hr className="my-3 max-w-sm mx-auto"></hr>
         <h3 className="text-2xl font-semibold mb-2 text-primary uppercase">{t("title")}</h3>
         <p className="text-sm text-justify">
           {t("subtitle")}
@@ -65,6 +64,6 @@ export default function Help() {
           }
         </ul>
       </div>
-    </section>
+    </main>
   )
 }

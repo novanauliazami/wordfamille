@@ -1,11 +1,23 @@
 {
   "header": {
     "home": "Accueil",
+    "about": "À Propos de Nous",
     "evaluation": "Exercices",
-    "help": "Aide",
+    "help": "Le Mode d'Emploi",
     "search": "RECHERCHER"
   },
+  "about": {
+    "whatis": "À Propos de Nous",
+    "whatis_desc": "WordFamille.com est un portail web de recherche de mots en français gratuit destiné aux apprenants débutants en français à l'Université Negeri Semarang. Conçu de manière attrayante selon le Programme d'Études (RPS) et le livre Tendance A1, avec plus de 35 racines de mots et plus de 150 dérivés de familles de mots. Les points forts ? Un accès facile depuis divers appareils, un guide d'utilisation, des groupes de mots, des traductions et une évaluation de l'apprentissage. Enrichissez votre compréhension du français sur WordFamille.com!",
+    "purpose": "L'objectif",
+    "purpose_desc": "WordFamille.com a été conçu dans le but de faciliter la compréhension et d'aider à enrichir le vocabulaire de la langue française. Un accès facile depuis divers appareils, un design attrayant, et des fonctionnalités d'évaluation de l'apprentissage font de WordFamille.Com le compagnon idéal pour explorer le monde des mots en français.",
+    "scope": "La couverture de WordFamille.com",
+    "scope_desc": "“Plus de 150 dérivés de mots issus de plus de 30 racines de mots en français sont disponibles. Cette couverture provient du matériel \"Se Presenter\" qui est pertinent avec le livre Tendance A1 et le Référentiel de Programme d'Études (RPS) \"Français Écrit Introductif\", servant de référence pour l'apprentissage du français aux étudiants du semestre 1 du Département d'Éducation en Langue Française de l'Université Negeri Semarang."
+  },
   "index": {
+    "tagline": "Exploration de la langue française: Découvrez le mots de la meme famille en Français",
+    "tagline_description": "Bienvenue sur wordfamille.com : le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
+    "cta": "Commensez",
     "search": "Etrez le mots"
   },
   "help": {
