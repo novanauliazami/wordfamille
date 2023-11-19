@@ -81,7 +81,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Elle est une  en médecine.",
+    "question": "Elle est une %s en médecine.",
     "options": [
       "étudiant",
       "étudiante",
@@ -99,7 +99,7 @@ export const questions = [
     "correctAns": 1
   },
   {
-    "question": " La réunion %s à 9 heures",
+    "question": "La réunion %s à 9 heures",
     "options": [
       "commencement",
       "commençant",
@@ -108,7 +108,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": " Le couple a des origines %s -italiennes",
+    "question": "Le couple a des origines %s-italiennes",
     "options": [
       "français",
       "francophonie",
@@ -117,7 +117,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": ". Mon amie fait une %s sur les oiseaux.",
+    "question": "Mon amie fait une %s sur les oiseaux.",
     "options": [
       "étude",
       "étudiante",
@@ -135,7 +135,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": " La %s d'un bébé est un événement spécia",
+    "question": "La %s d'un bébé est un événement spécia",
     "options": [
       "naitre",
       "naissance",
@@ -144,7 +144,7 @@ export const questions = [
     "correctAns": 1
   },
   {
-    "question": " L'%s de la langue étrangère est amusant",
+    "question": "L'%s de la langue étrangère est amusant",
     "options": [
       "apprenant",
       "apprendre",
@@ -153,7 +153,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": ". J'attends un %s important de mon ami",
+    "question": "J'attends un %s important de mon ami",
     "options": [
       "appel",
       "appellation",
@@ -198,7 +198,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": ". Bienvenue à l'%s de l'école",
+    "question": "Bienvenue à l'%s de l'école",
     "options": [
       "accueilli",
       "accueil",
@@ -216,7 +216,7 @@ export const questions = [
     "correctAns": 2
   },
   {
-    "question": " Je n'ai jamais vu cet homme auparavant, il est %s.",
+    "question": "Je n'ai jamais vu cet homme auparavant, il est %s.",
     "options": [
       "inconnu",
       "connaissance",
@@ -234,7 +234,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": ". La photo est claire et nette, elle est %s.",
+    "question": "La photo est claire et nette, elle est %s.",
     "options": [
       "représentation",
       "représentable",
