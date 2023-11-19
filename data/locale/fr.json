@@ -1,11 +1,24 @@
 {
   "header": {
     "home": "Accueil",
+    "about": "À Propos de Nous",
     "evaluation": "Exercices",
-    "help": "Aide",
+    "help": "Le Mode d'Emploi",
     "search": "RECHERCHER"
   },
+  "about": {
+    "title": "À Propos de Nous",
+    "whatis": "À Propos de Nous",
+    "whatis_desc": "WordFamille.com est un portail web de recherche de mots en français gratuit destiné aux apprenants débutants en français à l'Université Negeri Semarang. Conçu de manière attrayante selon le Programme d'Études (RPS) et le livre Tendance A1, avec plus de 35 racines de mots et plus de 150 dérivés de familles de mots. Les points forts ? Un accès facile depuis divers appareils, un guide d'utilisation, des groupes de mots, des traductions et une évaluation de l'apprentissage. Enrichissez votre compréhension du français sur WordFamille.com!",
+    "purpose": "L'objectif",
+    "purpose_desc": "WordFamille.com a été conçu dans le but de faciliter la compréhension et d'aider à enrichir le vocabulaire de la langue française. Un accès facile depuis divers appareils, un design attrayant, et des fonctionnalités d'évaluation de l'apprentissage font de WordFamille.Com le compagnon idéal pour explorer le monde des mots en français.",
+    "scope": "La couverture de WordFamille.com",
+    "scope_desc": "“Plus de 150 dérivés de mots issus de plus de 30 racines de mots en français sont disponibles. Cette couverture provient du matériel \"Se Presenter\" qui est pertinent avec le livre Tendance A1 et le Référentiel de Programme d'Études (RPS) \"Français Écrit Introductif\", servant de référence pour l'apprentissage du français aux étudiants du semestre 1 du Département d'Éducation en Langue Française de l'Université Negeri Semarang."
+  },
   "index": {
+    "tagline": "Exploration de la langue française: Découvrez le mots de la meme famille en Français",
+    "tagline_description": "Bienvenue sur Wordfamille.com : le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
+    "cta": "Commensez",
     "search": "Etrez le mots"
   },
   "help": {
@@ -19,10 +32,20 @@
     "step3Detail": "Les résultats de votre recherche seront affichés dans différentes catégories telles que \"Famille de mots en français\", \"Traduction\", et \"Types de mots\"."
   },
   "evaluation": {
-    "title": "Exercices",
+    "title": "L’exercices de Vocabulaire",
+    "desc": "Les questions sont conçues pour évaluer dans quelle mesure les utilisateurs tirent parti de WordFamille.Com afin d'enrichir leur vocabulaire familial en français.",
+    "question": "Les question",
     "instructions": "Comprenez le sens et choisissez le mot approprie en fonction du contexte de la question ci-dessous dans la colonne vide.",
     "retry": "Recommenez",
     "done": "Fait",
-    "answer": "Repondre"
+    "answer": "Repondre",
+    "instructionDetail": "Instructions pour remplir l'exercice de vocabulaire familial en français:",
+    "intructions": {
+      "understanding": "Comprenez la signification ou le contexte de chaque question.",
+      "answers": "Utilisez les options de la colonne pour choisir la réponse correcte.",
+      "nextStep": "Une fois que vous avez choisi la bonne réponse, l'exercice passera automatiquement à la question suivante.",
+      "completing": "Les utilisateurs peuvent terminer l'exercice pour chaque numéro de question.",
+      "result": "Les résultats de l'exercice seront affichés une fois que l'exercice est terminé."
+    }
   }
 }

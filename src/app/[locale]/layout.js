@@ -4,7 +4,6 @@ import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import Help from '@/components/help'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,8 +28,6 @@ export default async function RootLayout({children, params: {locale}}) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header locale={locale} />
           {children}
-          <Help />
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,12 +1,25 @@
 {
   "header": {
     "home": "Beranda",
+    "about": "Tentang Kami",
     "evaluation": "Evaluasi",
-    "help": "Bantuan",
+    "help": "Petunjuk Penggunaan",
     "search": "CARI"
   },
   "index": {
+    "tagline": "Explorasi Bahasa Perancis: Temukan Keluarga Kata Bahasa Perancis",
+    "tagline_description": "Selamat datang di Wordfamille.com: pusat eksplorasi bahasa Perancis! Temukan kekayaan turunan kata, jenis kata, terjemahan, hingga latihan kosakata. Tunjukan semangat belajar bahasa Perancis dan nikmati pesona kata-kata Perancis yang unik!",
+    "cta": "Mulai",
     "search": "Masukan kata kerja dalam bahasa Perancis"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "whatis": "Apa itu wordfamille.com",
+    "whatis_desc": "WordFamille.com adalah portal website Mesin pencarian kata Bahasa Perancis gratis untuk pembelajar bahasa perancis pemula di Universitas Negeri Semarang. Didesain menarik sesuai RPS dan Buku Tendance A1, dengan lebih dari 35 akar kata dan 150+ turunan kata keluarga kata. Keunggulan? Akses mudah dari berbagai perangkat, panduan penggunaan, kelompok kata, terjemahan, dan evaluasi pembelajaran. Perkaya pemahaman Bahasa Perancis Anda di WordFamille.com!",
+    "purpose": "Tujuan",
+    "purpose_desc": "Wordfamille.com dirancang dengan tujuan mempermudah pemahaman dan membantu memperkaya kosakata Bahasa Perancis. Akses mudah dari berbagai perangkat, tampilan menarik, dan fitur evaluasi pembelajaran membuat WordFamille.Com menjadi teman ideal dalam menjelajahi dunia kata-kata Bahasa Perancis.",
+    "scope": "Cakupan Wordfamille.com",
+    "scope_desc": "Telah tersedia lebih dari 150 turunan kata yang berasal dari 30+ akar kata dalam bahasa perancis. Cakupan tersebut berasal dari materi Se Presenter yang relevan dengan buku Tendance A1 dan RPS Francais Ecrit Introductif sebagai acuan pembelajaran bahasa perancis pada mahasiswa semester 1 Pendidikan Bahasa Perancis Universitas Negeri Semarang."
   },
   "help": {
     "title": "Petunjuk Penggunaan",
@@ -19,10 +32,20 @@
     "step3Detail": "Hasil pencarian akan ditampilkan dalam beberapa kategori seperti \"Keluarga kata bahasa Perancis\", \"Terjemahan\", dan \"Jenis Kata.\""
   },
   "evaluation": {
-    "title": "Evaluasi",
+    "title": "Latihan kosakata",
+    "desc": "Latihan soal ditunjukan untuk mengetahui sejauh mana pengguna memanfaatkan wordfamille.com untuk membantu memperkaya kosakata keluarga kata bahasa perancis.",
+    "question": "Pertanyaan",
     "instructions": "Pahami makna dan pilihlah kata yang tepat sesuai konteks soal di bawah ini pada kolom yang kosong.",
     "retry": "Ulangi",
     "done": "Selesai",
-    "answer": "Jawab"
+    "answer": "Jawab",
+    "instructionDetail": "Petunjuk pengisian latihan kosakata keluarga kata Bahasa Perancis",
+    "intructions": {
+      "understanding": "Pahami makna atau konteks setiap soal.",
+      "answers": "Gunakan kolom pilihan untuk memilih jawaban yang tepat.",
+      "nextStep": "Jika sudah memilih jawaban benar, latihan akan berlanjut otomatis ke soal berikutnya.",
+      "completing": "Pengguna dapat menyelesaikan latihan pada setiap nomor soal.",
+      "result": "Hasil latihan akan ditampilkan setelah latihan selesai."
+    }
   }
 }

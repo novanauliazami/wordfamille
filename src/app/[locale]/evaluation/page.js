@@ -3,10 +3,11 @@
 import reactStringReplace from 'react-string-replace'
 import { useTranslations } from 'next-intl'
 import { questions } from '@/lib/questions'
-import { useState, useEffect, useTransition } from 'react'
-import { PieChart, Pie, Cell, Label } from 'recharts';
-import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6';
-import { FaTimesCircle } from 'react-icons/fa';
+import { useState, useEffect } from 'react'
+import { PieChart, Pie, Cell, Label } from 'recharts'
+import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6'
+import { Accordion } from 'flowbite-react'
+import { FaTimesCircle } from 'react-icons/fa'
 
 function VisualizeScore(correctAnswer, nQuestions) {
   const data = [
@@ -50,6 +51,36 @@ function Evaluation() {
   const [done, setDone] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
+
+  const InstructionList = () => {
+    const ins = useTranslations("evaluation.intructions")
+    const insList = ["understanding", "answers", "nextStep", "completing", "result"]
+
+    return (
+      insList.map((key) => {
+        return (
+          <li key={key}>
+            {ins(key)}
+          </li>
+        )
+      })  
+    )
+  }
+
+  const InstructionAccordion = () => {
+    return (
+      <Accordion className="my-5">
+        <Accordion.Panel>
+          <Accordion.Title>{t("instructionDetail")}</Accordion.Title>
+          <Accordion.Content>
+            <ul role="list" className="list-decimal ml-4 space-4">
+              <InstructionList />
+            </ul>
+          </Accordion.Content>
+        </Accordion.Panel>
+      </Accordion>
+    )
+  }
 
   const handleOptions = (e) => {
     const ans = e.target.value
@@ -146,37 +177,48 @@ function Evaluation() {
 
   const handleRetryButton = () => {
     if (done) {
-      setAnswers([])
       setCurrentQuestion(0)
+      setAnswers([])
       shuffleArray(questions)
     }
     setDone(!done)
   }
+
   useEffect(() => {
-    if (!(currentQuestion < maxQuestion))
+    if (!(currentQuestion < maxQuestion)) {
       setDone(true)
-  }, [currentQuestion])
+    }
+  }, [])
 
   return (
     <div className="container lg:max-w-4xl mx-auto my-8">
-      <div className="w-full p-2 bg-base border border-gray-200 rounded-lg shadow-sm sm:p-8">
-        <div className="mb-4 py-2 border-b border-gray-200">
-          <div className="flex items-center justify-between my-1">
-            <h5 className="text-md font-bold">
-              {t("title")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
-            </h5>
-            <button
-              onClick={handleRetryButton}
-              className="text-sm font-bold border text-gray-200 bg-primary px-3 py-1 rounded-md hover:bg-blue-700">
-              {done ? t("retry") : t("done")}
-            </button>
-          </div>
-          <p className="text-md md:max-w-[70%]">
-            {t("instructions")}
-          </p>
+      <div className="py-2">
+        <div className="text-center">
+          <h3 className="text-xl font-bold uppercase mb-2 text-accent">
+            {t("title")}
+          </h3>
         </div>
-        {!done ? <ShowQuestion /> : <ShowCorrection />}
+        <p className="text-md text-justify">
+          {t("desc")}
+        </p>
+        <InstructionAccordion />
       </div>
+      <div className="mb-4 py-2 border-b border-gray-200">
+        <div className="flex items-center justify-between my-1">
+          <h5 className="text-md font-bold">
+            {t("question")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
+          </h5>
+          <button
+            onClick={handleRetryButton}
+            className="text-sm font-bold border text-gray-200 bg-secondary px-3 py-1 rounded-md hover:bg-accent">
+            {done ? t("retry") : t("done")}
+          </button>
+        </div>
+        <p className="text-md md:max-w-[70%]">
+          {t("instructions")}
+        </p>
+      </div>
+      {!done && currentQuestion < maxQuestion ? <ShowQuestion /> : <ShowCorrection />}
     </div>
   )
 }
