@@ -32,10 +32,20 @@
     "step3Detail": "Hasil pencarian akan ditampilkan dalam beberapa kategori seperti \"Keluarga kata bahasa Perancis\", \"Terjemahan\", dan \"Jenis Kata.\""
   },
   "evaluation": {
-    "title": "Evaluasi",
+    "title": "Latihan kosakata",
+    "desc": "Latihan soal ditunjukan untuk mengetahui sejauh mana pengguna memanfaatkan wordfamille.com untuk membantu memperkaya kosakata keluarga kata bahasa perancis.",
+    "question": "Pertanyaan",
     "instructions": "Pahami makna dan pilihlah kata yang tepat sesuai konteks soal di bawah ini pada kolom yang kosong.",
     "retry": "Ulangi",
     "done": "Selesai",
-    "answer": "Jawab"
+    "answer": "Jawab",
+    "instructionDetail": "Petunjuk pengisian latihan kosakata keluarga kata Bahasa Perancis",
+    "intructions": {
+      "understanding": "Pahami makna atau konteks setiap soal.",
+      "answers": "Gunakan kolom pilihan untuk memilih jawaban yang tepat.",
+      "nextStep": "Jika sudah memilih jawaban benar, latihan akan berlanjut otomatis ke soal berikutnya.",
+      "completing": "Pengguna dapat menyelesaikan latihan pada setiap nomor soal.",
+      "result": "Hasil latihan akan ditampilkan setelah latihan selesai."
+    }
   }
 }

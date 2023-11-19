@@ -32,10 +32,20 @@
     "step3Detail": "Les résultats de votre recherche seront affichés dans différentes catégories telles que \"Famille de mots en français\", \"Traduction\", et \"Types de mots\"."
   },
   "evaluation": {
-    "title": "Exercices",
+    "title": "L’exercices de Vocabulaire",
+    "desc": "Les questions sont conçues pour évaluer dans quelle mesure les utilisateurs tirent parti de WordFamille.Com afin d'enrichir leur vocabulaire familial en français.",
+    "question": "Les question",
     "instructions": "Comprenez le sens et choisissez le mot approprie en fonction du contexte de la question ci-dessous dans la colonne vide.",
     "retry": "Recommenez",
     "done": "Fait",
-    "answer": "Repondre"
+    "answer": "Repondre",
+    "instructionDetail": "Instructions pour remplir l'exercice de vocabulaire familial en français:",
+    "intructions": {
+      "understanding": "Comprenez la signification ou le contexte de chaque question.",
+      "answers": "Utilisez les options de la colonne pour choisir la réponse correcte.",
+      "nextStep": "Une fois que vous avez choisi la bonne réponse, l'exercice passera automatiquement à la question suivante.",
+      "completing": "Les utilisateurs peuvent terminer l'exercice pour chaque numéro de question.",
+      "result": "Les résultats de l'exercice seront affichés une fois que l'exercice est terminé."
+    }
   }
 }
