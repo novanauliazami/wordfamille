@@ -203,22 +203,26 @@ function Evaluation() {
         </p>
         <InstructionAccordion />
       </div>
-      <div className="mb-4 py-2 border-b border-gray-200">
-        <div className="flex items-center justify-between my-1">
-          <h5 className="text-md font-bold">
-            {t("question")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
-          </h5>
-          <button
-            onClick={handleRetryButton}
-            className="text-sm font-bold border text-gray-200 bg-secondary px-3 py-1 rounded-md hover:bg-accent">
-            {done ? t("retry") : t("done")}
-          </button>
+      <div className="border border-gray-200 rounded-lg">
+        <div className="border-b border-gray-200 p-4 bg-gray-100">
+          <div className="flex items-center justify-between my-1 ">
+            <h5 className="text-md font-bold">
+              {t("question")}#{currentQuestion < maxQuestion ? currentQuestion+1 : maxQuestion}
+            </h5>
+            <button
+              onClick={handleRetryButton}
+              className="text-sm font-bold border text-gray-200 bg-secondary px-3 py-1 rounded-md hover:bg-accent">
+              {done ? t("retry") : t("done")}
+            </button>
+          </div>
+          <p className="text-md md:max-w-[70%]">
+            {t("instructions")}
+          </p>
         </div>
-        <p className="text-md md:max-w-[70%]">
-          {t("instructions")}
-        </p>
+        <div className="p-4">
+          {!done && currentQuestion < maxQuestion ? <ShowQuestion /> : <ShowCorrection />}
+        </div>
       </div>
-      {!done && currentQuestion < maxQuestion ? <ShowQuestion /> : <ShowCorrection />}
     </div>
   )
 }

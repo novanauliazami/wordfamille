@@ -19,14 +19,14 @@ function Hero() {
 
   return (
     <div className="w-full min-h-screen flex items-center">
-      <div className="container mx-auto">
+      <div className="lg:max-w-5xl mx-auto">
         <div className="flex flex-col lg:flex-row text-center lg:text-left items-center justify-center">
-          <div className="lg:basis-3/5 py-auto space-y-3">
+          <div className="lg:basis-4/5 py-auto space-y-3">
             <h2 className="font-black tracking-wider text-2xl lg:text-5xl">{t("tagline")}</h2>
             <p className="lg:max-w-[75%]">{t("tagline_description")}</p>
             <div><CTA href="/word">{t("cta")}</CTA></div>
           </div>
-          <div className="lg:basis-2/5 order-first lg:order-last">
+          <div className="lg:basis-1/5 order-first lg:order-last">
             <Image
               className="mx-auto max-w-[50%] lg:max-w-full"
               src="/french-logo.png" width={240} height={240}

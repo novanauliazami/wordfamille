@@ -10,7 +10,11 @@
     "tagline": "Explorasi Bahasa Perancis: Temukan Keluarga Kata Bahasa Perancis",
     "tagline_description": "Selamat datang di Wordfamille.com: pusat eksplorasi bahasa Perancis! Temukan kekayaan turunan kata, jenis kata, terjemahan, hingga latihan kosakata. Tunjukan semangat belajar bahasa Perancis dan nikmati pesona kata-kata Perancis yang unik!",
     "cta": "Mulai",
-    "search": "Masukan kata kerja dalam bahasa Perancis"
+    "search": "Masukan kata kerja dalam bahasa Perancis",
+    "findWord": "Temukan Keluarga Kata",
+    "evaluation": "Evaluasi",
+    "aboutUs": "Tentang Kami",
+    "instructions": "Petunjuk Penggunaan"
   },
   "about": {
     "title": "Tentang Kami",
