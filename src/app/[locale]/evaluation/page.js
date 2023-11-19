@@ -3,7 +3,7 @@
 import reactStringReplace from 'react-string-replace'
 import { useTranslations } from 'next-intl'
 import { questions } from '@/lib/questions'
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect } from 'react'
 import { PieChart, Pie, Cell, Label } from 'recharts'
 import { FaRegCircleCheck, FaCircleCheck, FaRegCircle } from 'react-icons/fa6'
 import { Accordion } from 'flowbite-react'
@@ -51,7 +51,6 @@ function Evaluation() {
   const [done, setDone] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
-  const [isDialogOpen, setDialogOpen] = useState(false)
 
   const InstructionList = () => {
     const ins = useTranslations("evaluation.intructions")
@@ -178,22 +177,24 @@ function Evaluation() {
 
   const handleRetryButton = () => {
     if (done) {
-      setAnswers([])
       setCurrentQuestion(0)
+      setAnswers([])
       shuffleArray(questions)
     }
     setDone(!done)
   }
+
   useEffect(() => {
-    if (!(currentQuestion < maxQuestion))
+    if (!(currentQuestion < maxQuestion)) {
       setDone(true)
-  }, [currentQuestion])
+    }
+  }, [])
 
   return (
     <div className="container lg:max-w-4xl mx-auto my-8">
       <div className="py-2">
         <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-2 text-primary">
+          <h3 className="text-xl font-bold uppercase mb-2 text-accent">
             {t("title")}
           </h3>
         </div>
@@ -209,7 +210,7 @@ function Evaluation() {
           </h5>
           <button
             onClick={handleRetryButton}
-            className="text-sm font-bold border text-gray-200 bg-primary px-3 py-1 rounded-md hover:bg-blue-700">
+            className="text-sm font-bold border text-gray-200 bg-secondary px-3 py-1 rounded-md hover:bg-accent">
             {done ? t("retry") : t("done")}
           </button>
         </div>
@@ -217,7 +218,7 @@ function Evaluation() {
           {t("instructions")}
         </p>
       </div>
-      {!done ? <ShowQuestion /> : <ShowCorrection />}
+      {!done && currentQuestion < maxQuestion ? <ShowQuestion /> : <ShowCorrection />}
     </div>
   )
 }

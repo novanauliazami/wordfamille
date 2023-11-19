@@ -18,7 +18,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Les paysages de l'%s sont très variés",
+    "question": "Les paysages de l'%s sont très variés.",
     "options": [
       "allemande",
       "Allemagne",
@@ -27,7 +27,7 @@ export const questions = [
     "correctAns": 1
   },
   {
-    "question": ". Le %s huit ressemble à un bonhomme.",
+    "question": "Le %s huit ressemble à un bonhomme.",
     "options": [
       "chiffrer",
       "chiffre",
@@ -252,7 +252,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "%s après moi : bonjour",
+    "question": "%s après moi : bonjour.",
     "options": [
       "Répète",
       "répétition",
@@ -261,7 +261,7 @@ export const questions = [
     "correctAns": 0
   },
   {
-    "question": "Le %s paie son loyer chaque mois",
+    "question": "Le %s paie son loyer chaque mois.",
     "options": [
       "location",
       "louer",
