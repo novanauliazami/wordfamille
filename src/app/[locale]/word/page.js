@@ -19,7 +19,7 @@ function SuggestionWords() {
           const url = "/word/" + encodeURI(word.toLocaleLowerCase())
           return (
             <Link key={word} href={url}>
-              <div className="border border-gray-200 bg-gray-100 px-3 py-1">
+              <div className="border border-gray-200 bg-inherit px-3 py-1">
                 {word}
               </div>
             </Link>

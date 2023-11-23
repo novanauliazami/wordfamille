@@ -2,7 +2,7 @@
   "header": {
     "home": "Accueil",
     "about": "À Propos de Nous",
-    "evaluation": "Exercices",
+    "evaluation": "L'exercices",
     "help": "Le Mode d'Emploi",
     "search": "RECHERCHER"
   },
@@ -16,12 +16,12 @@
     "scope_desc": "“Plus de 150 dérivés de mots issus de plus de 30 racines de mots en français sont disponibles. Cette couverture provient du matériel \"Se Presenter\" qui est pertinent avec le livre Tendance A1 et le Référentiel de Programme d'Études (RPS) \"Français Écrit Introductif\", servant de référence pour l'apprentissage du français aux étudiants du semestre 1 du Département d'Éducation en Langue Française de l'Université Negeri Semarang."
   },
   "index": {
-    "tagline": "Exploration de la langue française: Découvrez le mots de la même famille en Français",
-    "tagline_description": "Bienvenue sur Wordfamille.com : le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
+    "tagline": "Exploration de la langue française: Découvrir le mots de la même famille en Français",
+    "tagline_description": "Bienvenue sur Wordfamille.com: le centre d'exploration de la langue française! Découvrez la richesse des dérivations, des types de mots, des traductions et des exercices de vocabulaire. Montrez votre enthousiasme pour apprendre le français et savourez le charme unique des mots français !",
     "cta": "Commencez",
     "search": "Etrez le mots",
-    "findWord": "Trouvez le Mots de la Même Famille",
-    "evaluation": "Exercice",
+    "findWord": "Trouver le Mots de la Même Famille",
+    "evaluation": "L'exercice",
     "aboutUs": "À propos de Nous",
     "instructions": "Le Mode d'Emploi"
   },
