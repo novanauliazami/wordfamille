@@ -5,13 +5,10 @@ import Link from "next/link"
 function Menu({target, img, children}) {
   return (
     <Link href={target}>
-      <div className="relative lg:max-w-xl mx-auto rounded-md border-2 border-plain">
-        <Image className="h-32 w-full object-cover rounded-md grayscale" src={img} width={240} height={320} alt={children} />
-        <div className="absolute inset-0 bg-secondary bg-opacity-20 rounded-md"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary from-50% to-transparent to-80% rounded-md"></div>
-        <div className="absolute inset-0 w-1/2 left-4 flex items-center">
-            <h2 className="text-plain text-xl hover:underline font-semibold uppercase">{children}</h2>
-        </div>
+      <div className="lg:max-w-xl flex items-center mx-auto bg-gradient-to-r from-secondary from-40% to-accent to-70% rounded-lg px-4 h-24 border-2 border-plain ">
+          <h2 className="text-plain text-xl w-1/2 hover:underline font-semibold uppercase">
+            {children}
+          </h2>
       </div>
     </Link>
   )
