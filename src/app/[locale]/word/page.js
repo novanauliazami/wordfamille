@@ -8,15 +8,15 @@ import { useEffect, useState } from 'react'
 
 function WordsBox({label,words}) {
   return (
-    <div className="flex flex-wrap w-full max-w-lg items-center justify-between">
-      <p className="basis-2/3">{label}</p>
-      <div className="flex basis-3/5 items-center justify-around space-x-3 py-4">
+    <div className="w-full py-4 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+      <p className="basis-2/5">{label}</p>
+      <div className="flex flex-wrap basis-3/5 items-center justify-between">
         {
           words.map((word)=> {
             const url = "/word/" + encodeURI(word.toLocaleLowerCase())
             return (
               <Link key={word} href={url}>
-                <div className="border border-gray-200 rounded-md bg-inherit font-sm mx-3 px-4 py-1">
+                <div className="border border-gray-200 rounded-md bg-inherit whitespace-nowrap m-1 text-sm px-3 py-1">
                   {word}
                 </div>
               </Link>
@@ -31,10 +31,13 @@ function WordsBox({label,words}) {
 export default function Home() {
   const t = useTranslations("index")
   const [lastSearch, setLastSearch] = useState([])
+
   useEffect(() => {
-    const prevLastSearch = window.localStorage.getItem("lastSearch")
-    setLastSearch(JSON.parse(prevLastSearch))
-  }, [lastSearch])
+    const prevRawLastSearch = window.localStorage.getItem("lastSearch")
+    const prevLastSearch = JSON.parse(prevRawLastSearch)
+    if (prevLastSearch)
+      setLastSearch(Array.isArray(prevLastSearch) ? prevLastSearch : [prevLastSearch])
+  }, [JSON.stringify(lastSearch)])
 
   const suggestionWords = [
     "s'appeler",
@@ -54,7 +57,7 @@ export default function Home() {
           />
           <SearchBox label={t("search")}/>
           <WordsBox label="Saran Kata" words={suggestionWords} />
-          {lastSearch && <WordsBox label="Riwayat Pencarian" words={lastSearch} />}
+          {lastSearch.length && <WordsBox label="Riwayat Pencarian" words={lastSearch} />}
         </div>
       </section>
     </main>

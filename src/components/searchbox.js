@@ -34,9 +34,11 @@ function SearchBox(props) {
     if (Array.isArray(lastSearch) && lastSearch.length)
       window.localStorage.setItem("lastSearch", JSON.stringify(lastSearch.slice(-3)))
 
-    const prevLastSearch = window.localStorage.getItem("lastSearch")
-    setLastSearch(JSON.parse(prevLastSearch))
-  }, [lastSearch])
+    const prevRawLastSearch = window.localStorage.getItem("lastSearch")
+    const prevLastSearch = JSON.parse(prevRawLastSearch)
+    if (prevLastSearch)
+      setLastSearch(Array.isArray(prevLastSearch) ? prevLastSearch : [prevLastSearch])
+  }, [JSON.stringify(lastSearch)])
 
   const redirect = (to) => {
     router.push(encodeURI(to))
