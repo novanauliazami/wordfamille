@@ -5,7 +5,7 @@ import { FaRegTimesCircle } from "react-icons/fa"
 
 export async function generateMetadata({ params }) {
   return {
-    title: `Definisi Kata ${params.slug} - Wordfamille`,
+    title: `Keluarga Kata ${params.slug} - Wordfamille`,
   }
 }
 export async function generateStaticParams() {
@@ -89,10 +89,10 @@ export default async function ShowWord({params}) {
             <h5 className="text-xl font-bold py-2 border-b-2 border-accent leading-none">
               {notFound ?  decodeURI(params.slug) : wordFamily.word}
             </h5>
-            <Link href="/" className="text-lg">
+            <Link href="/word" className="text-lg">
               <FaRegTimesCircle />
             </Link>
-        </div> 
+        </div>
         {notFound ? (<DefinitionNotFound />) : (<DefinitionList definitions={wordFamily.family} />)}
       </div>
     </div>

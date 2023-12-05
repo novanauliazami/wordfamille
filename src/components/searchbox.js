@@ -14,11 +14,13 @@ function ShowOption({option}) {
   return (<span className="pl-5">{option.item.word}</span>)
 }
 
+
 function SearchBox(props) {
+  const router = useRouter()
   const [searchSuggest, setSearchSuggest] = useState([])
   const [selectedWord, setSelectedWord] = useState("")
   const [query, setQuery] = useState("")
-  const router = useRouter()
+  const [lastSearch, setLastSearch] = useState([])
 
   useEffect(() => {
     const encodedQuery = encodeURI(query)
@@ -27,18 +29,30 @@ function SearchBox(props) {
       .then((data) => setSearchSuggest(data))
   }, [query])
 
+
+  useEffect(() => {
+    if (Array.isArray(lastSearch) && lastSearch.length)
+      window.localStorage.setItem("lastSearch", JSON.stringify(lastSearch.slice(-3)))
+
+    const prevLastSearch = window.localStorage.getItem("lastSearch")
+    setLastSearch(JSON.parse(prevLastSearch))
+  }, [lastSearch])
+
   const redirect = (to) => {
     router.push(encodeURI(to))
   } 
   const handleSubmit = ({id, name}) => {
+    setSelectedWord(name)
+    setLastSearch(lastSearch => [...lastSearch, name])
+    
     if(searchSuggest.length > 0) 
       redirect(`/word/${searchSuggest[0].score <= .05 ? searchSuggest[0].item.word : name}`)
-    redirect (`/word/${name}`)
-    setSelectedWord(name)
+    else
+      redirect (`/word/${name}`)
   }
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full">
       <Combobox value={selectedWord} onChange={handleSubmit}>
         <div className="relative w-full">
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-base border border-accent">
@@ -85,7 +99,6 @@ function SearchBox(props) {
             ))}
           </Combobox.Options>
         </Transition>
-        
         </div>
       </Combobox>
     </div>

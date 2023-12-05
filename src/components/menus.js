@@ -5,7 +5,7 @@ import Link from "next/link"
 function Menu({target, img, children}) {
   return (
     <Link href={target}>
-      <div className="lg:max-w-xl flex items-center mx-auto bg-gradient-to-r from-secondary from-40% to-accent to-70% rounded-lg px-4 h-24 border-2 border-plain ">
+      <div className="lg:max-w-xl flex items-center mx-auto bg-gradient-to-r from-secondary from-60% to-accent to-100% rounded-lg px-4 h-24 border-2 border-plain ">
           <h2 className="text-plain text-xl w-1/2 hover:underline font-semibold uppercase">
             {children}
           </h2>

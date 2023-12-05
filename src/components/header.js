@@ -60,7 +60,7 @@ export default function Header({locale}) {
   ]
 
   return (
-    <Navbar className="bg-gradient-to-r from-secondary from-20% to-primary to-60%">
+    <Navbar className="bg-gradient-to-r from-secondary from-40% to-accent to-80%">
       <Navbar.Brand href="/" className="grow">
         <Image
           alt="WordFamille Logo"
